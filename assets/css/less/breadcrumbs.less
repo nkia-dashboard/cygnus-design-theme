@@ -1,0 +1,195 @@
+@import "bootstrap/variables.less";
+@import "bootstrap/mixins.less";
+@import "variables.less";
+@import "mixins.less";
+
+
+//some breadcrumbs variables
+@breadcrumb-bg:#fff;
+@breadcrumb-border:#B9B9B9;
+@breadcrumb-text-color:#7b8993;
+@breadcrumb-link-color:#656E77;
+
+@breadcrumb-separator:"\f105";//font awesome icon
+
+@hover-color:#428bca;
+
+
+/* breadcrumbs and searchbox */
+.sidebar-shortcuts-large>.breadcrumbs {height:40px !important;}
+#breadcrumbs.breadcrumbs{background-color:@breadcrumb-bg; border-bottom:1px solid @breadcrumb-border;}
+#uiguide.breadcrumbs {
+  background-color: #ffffff;
+  border-bottom: 1px solid #ffffff;
+  font-weight: bold;
+  text-align: left;
+  padding-left: 16px;
+  color: #F26916;}
+.breadcrumbs {
+ position:relative;
+ outline:0;
+ border-bottom:1px solid @breadcrumb-border;
+ background-color:@breadcrumb-bg;
+ vertical-align:sub;
+ min-height:@breadcrumb-height;
+ line-height:(@breadcrumb-height - 1);
+
+ padding:0 12px 0 0;
+
+ display:block;
+ 
+ &.fixed , &.breadcrumbs-fixed{
+   position:fixed;
+   right:0;
+   left:(@sidebar-width);
+   top:@navbar-mh;
+   z-index:@zindex-navbar-fixed - 2;
+ }
+}
+.breadcrumbs> strong{color:#70799C; margin-left:3px;}
+//.breadcrumbs > strong:before {
+//    color: #B3B8C3;
+//    margin: 0 4px -1px 3px;
+//    font-family: "FontAwesome";
+//    font-size: 16px;
+//    font-weight:400;
+//    content: "\f321";
+//   
+//    
+//}
+//
+//#resourceExplorerZone .breadcrumbs > strong:before {
+//    font-size: 15px;
+//    content: "\f210";
+//    
+//}
+.breadcrumb i {font-size:17px; color:#C4C4C4; margin-right:9px; 
+	
+}
+.breadcrumb {
+ background-color: transparent;
+ display: inline-block;
+ line-height: 1.6;
+ margin: 0 22px 0 12px;
+ padding: 0;
+ font-size:12px;
+ color:#888;
+ border-radius:0;
+ // >li:nth-child(6):before{font-size:11px !important; content:"..."; }
+ //>li:nth-child(6){ display:none !important; }
+  > li {
+    & , &.active {
+	  color:@breadcrumb-text-color;
+	  outline:0;
+	}
+	
+	> a {
+	  display:inline-block;
+	 
+	  outline:0;
+	 
+	  color:@breadcrumb-link-color;
+	  font-family:@nanumgothicFontFamily;
+	    &:hover{
+		text-decoration:none;
+		color:@hover-color;
+	 	}
+    }
+	
+	+ li:before {
+		font-family:FontAwesome;
+		font-size:12px;
+		content:@breadcrumb-separator;
+		color:@breadcrumb-arrow-color;
+		
+		margin-right: 0px;
+		padding: 0 3px;
+		position:relative;
+		top: 1px;
+	}
+  }
+  
+
+
+
+}
+
+
+@media only screen and (max-width: @screen-sm-max) {
+ .breadcrumb {
+	margin-left:20px;
+ }
+ .breadcrumbs.fixed , .breadcrumbs.breadcrumbs-fixed{
+	position: relative !important;
+	left: auto !important; right: auto !important;
+	top: auto !important;
+	z-index:auto !important;
+ }
+  .breadcrumb > li:nth-child(6) {
+    font-size: 11px !important;
+    display: none;}
+     .page-header small{display: none;}
+ body.breadcrumbs-fixed .ace-settings-container {
+	top:50px;
+ }
+}
+
+
+@media only screen and (max-width: @screen-xs) {
+ .breadcrumb > li > a {
+	padding:0 1px;
+	outline:0;
+ }
+ .breadcrumb > li:nth-child(6) {
+    font-size: 11px !important;
+    display: none;}
+     .page-header small{display: none;}
+}
+
+@media only screen and (max-width: @screen-tiny) {
+.breadcrumb {
+	margin-left:36px;
+	
+ }
+  .breadcrumb > li:nth-child(6) {
+    font-size: 11px !important;
+    display: none;}
+    .page-header small{display: none;}
+}
+
+
+
+.container.main-container {
+ .breadcrumbs.breadcrumbs-fixed {
+	left: auto !important;
+	right: auto !important;
+ }
+ 
+ @media (min-width: @screen-tablet) {
+	.breadcrumbs.breadcrumbs-fixed {
+		width: @container-tablet - @sidebar-width;
+	}
+	.menu-min + .main-content .breadcrumbs.breadcrumbs-fixed {
+		width: @container-tablet - @sidebar-min-width;
+	}
+ }
+ @media (min-width: @screen-desktop) {
+	.breadcrumbs.breadcrumbs-fixed {
+		width: @container-desktop - @sidebar-width;
+	}
+	.menu-min + .main-content .breadcrumbs.breadcrumbs-fixed {
+		width: @container-desktop - @sidebar-min-width;
+	}
+ }
+ @media (min-width: @screen-lg-desktop) {
+	.breadcrumbs.breadcrumbs-fixed {
+		width: @container-lg-desktop - @sidebar-width;
+	}
+	.menu-min + .main-content .breadcrumbs.breadcrumbs-fixed {
+		width: @container-lg-desktop - @sidebar-min-width;
+	}
+ }
+
+}
+
+

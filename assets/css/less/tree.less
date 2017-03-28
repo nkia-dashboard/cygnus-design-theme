@@ -1,0 +1,165 @@
+@import "bootstrap/variables.less";
+@import "bootstrap/mixins.less";
+@import "variables.less";
+@import "mixins.less";
+
+
+.js-required {
+                color: red;
+                display: block;
+                margin-bottom: 14px;
+}
+
+.js-recommended {
+                color: red;
+                display: block;
+                margin-bottom: 14px;
+}
+
+#jump-tree-table {
+                
+}
+
+#treeSide {
+                width: 50%;
+                /*background-color: #eee;*/
+                background-color: #f2f2f2;
+                padding: 20px;
+}
+
+#treeZone {
+                /*background-color: #eee;*/
+                background-color: #f2f2f2;
+}
+
+.tree-label {
+                color: #000000;
+                font-size: 12px;
+}
+
+.tree-label a {
+                text-decoration: none;
+                cursor: pointer;
+                color: #000000;
+                letter-spacing:-0.1px;
+               
+}
+
+.edit .tree-label:hover {
+    cursor: move;
+    color:#3d81b5; 
+    border: 1px solid #afcbe1;
+    border-radius:2px;      
+    background-color: rgba(80, 144, 193,0.15);  
+    padding:2px;
+    margin-left:-3px;  
+    a{  cursor: move;
+    color:#3d81b5; }
+}
+
+.edit .tree-label a:hover{color:#5090c1; cursor: move; letter-spacing:-0.1px;}
+.tree-label a:hover{color:#5090c1;}
+
+.tree-edit .tree-label a {
+  text-decoration: none;
+  color: #08121D;
+}
+.tree-edit .tree-label a span i.icon-large:after {
+  width: auto;
+  content: "\f0a4";
+  position: absolute;
+  color: rgb(17, 113, 88);
+  left: -19px;
+  top: 0px; 
+  border: 2px solid rgb(242, 242, 242);
+  font-size: 14px !important;
+  background-color: rgb(242, 242, 242);
+}
+
+DIV.tree-container {
+
+   padding: 11px 6px;
+}
+
+DIV.tree-container UL {
+    list-style-type: none;
+    background-image: url("img/tree-vpipe.png");
+    background-repeat: repeat-y;
+    margin: 0 0 0 0;
+    padding: 0;
+}
+
+DIV.tree-container UL UL {
+    /* Line up the nested list's vertical bar under the element's folder icon. */
+    margin: 0 0 0 18px;
+   
+    
+}
+
+
+DIV.tree-container LI {
+    margin: 0;
+    padding:0 !important;
+    background-image: url("img/tree-branch.png");
+    background-repeat: no-repeat;
+    line-height: 1.5;
+}
+
+/* The last one needs a special tweak to keep the vertical bar from extending down too far. */
+DIV.tree-container LI.last {
+    background-color: #f5f5f5;
+    background-image: url("img/tree-branchend.png");
+}
+
+/* Assume its a collapsed, but expandable, tree node. Later CSS rules overwrite this. */
+
+SPAN.tree-icon {
+    display: inline-block;
+    width: 14px;
+    height: 16px;
+    cursor: pointer;
+    background-image: url("img/tree-sprites.png");
+    background-position: 0px 3px;
+}
+
+/* Fiddle with it so that leaf nodes do not appear clickable. The label is clickable, the document
+   icon is not. */
+LI.leaf-node > SPAN.tree-icon {
+    cursor: default;
+    background-position: -35px -16px;
+}
+
+
+/* When the Tree is configured for selection, then it is the label, only on leaf nodes, that is
+    clickable. */
+DIV[data-tree-node-selection-enabled] LI.leaf-node > .tree-label {
+    cursor: pointer;
+    padding-left: 16px;
+    background: url("img/tree-sprites.png") no-repeat;
+}
+
+DIV[data-tree-node-selection-enabled] LI.leaf-node > .tree-label {
+    background-position: -64px 0px;
+}
+
+/* Marking selection leaf nodes in bold if selected will hopefully change soon. We may even be smart
+   enough to render a checkbox. */
+DIV[data-tree-node-selection-enabled] LI.leaf-node > .tree-label.selected-leaf-node {
+    background-position: -64px -16px;
+}
+
+SPAN.tree-icon.empty-node {
+    cursor: default;
+    background-position: -32px 0px;
+}
+
+SPAN.tree-expanded {
+    background-position: 0px -15px;
+}
+
+SPAN.tree-ajax-wait {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background-image: url("img/ajax-loader.gif");
+}

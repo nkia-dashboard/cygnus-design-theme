@@ -1,0 +1,127 @@
+@import "bootstrap/variables.less";
+@import "bootstrap/mixins.less";
+@import "variables.less";
+@import "mixins.less";
+
+
+@media print {  
+
+
+  
+
+/* progressbar */
+ 
+  a,
+  a:visited{
+    text-decoration: none;
+  }
+  a[href]:after {
+    content: none !important;
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+  
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+
+    page-break-inside: avoid
+  }
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  img {
+    max-width: 100% !important;
+  }
+  
+  
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+   h1, h2, h3,
+   h4, h5, h6    {
+    page-break-after: avoid;
+    page-break-inside: avoid; 
+  }
+  
+  ul, ol, dl     { page-break-before: avoid; }
+  select {
+    background: #fff !important;
+  }
+  .navbar {
+    display: none;
+  }
+  .sidebar, .ui-resizable, .ui-resizable-e, .sidebar-collapse, .sidebar-shortcuts, .sidebar-shortcuts-large {display:none !important;}
+
+
+  .main-container,.main-content{margin-left:0 !important;}
+  .menubar{display:none; width:0 !important;}
+  .table td,
+  .table th {
+    background-color: #fff !important;
+  }
+  .btn > .caret,
+  .dropup > .btn > .caret {
+    border-top-color: #000 !important;
+  }
+  .label {
+    border: 1px solid #000;
+  }
+  .table {
+    border-collapse: collapse !important;
+  }
+  .table-bordered th,
+  .table-bordered td {
+    border: 1px solid #ddd !important;
+  }
+  .nav-tabs > li, .nav-tabs > li > a,
+  [class*="head-tab"].nav-tabs>li:not(.active) > a,
+  [class*="head-tab"].nav-tabs > li > a
+  {
+   text-shadow: none !important;
+   box-shadow: none !important;
+  }
+ .nav-tabs[class*="head-tab"] > li > a{box-shadow:transparent !important; }
+ .nav.nav-pills > li.active > a
+ { border-bottom:3px solid #ccc !important;  }
+.admin-border {  min-height:175px !important; }
+.legendadmin-border{background:#fff !important; background-color:#fff !important;}
+ fieldset{   min-height:70px; }
+
+ [class*="col-xs-"] {
+	float: left;
+	
+ }
+ [class*="col-sm-"] {
+	float: left;
+
+  }
+  [class*="col-md-"] {
+	float: left;
+	
+  }
+ [class*="col-lg-"] {
+	float: left;
+	
+ }
+
+[id*="collapseBody_"]> .panel-body, .chartbody{overflow:hidden !important; background-color:#fff !important; }
+.chartbody{text-align:center !important; }
+.chartbody > div .chartlegend{overflow:hidden; text-overflow: ellipsis; p{height:20px; text-overflow: ellipsis;} bottom:0; min-height:60px; float:left;}
+.progress{height:17px;}
+.label-clear, .badge-clear,.label-attention, .badge-attention{background-color:#888 !important; }
+
+}

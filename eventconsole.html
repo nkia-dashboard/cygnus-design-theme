@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Cygnus UI Guide</title>
+
+		<meta name="description" content="Restyling jQuery UI Widgets and Elements" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- basic styles -->
+
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+
+		<!--[if IE 7]>
+		  <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css" />
+		<![endif]-->
+
+		<!-- page specific plugin styles -->
+
+		<link rel="stylesheet" href="assets/css/jquery-ui-1.10.3.full.min.css" />
+
+		<!-- fonts -->
+
+		<link rel="stylesheet" href="assets/css/ace-fonts.css" />
+
+		<!-- ace styles -->
+
+		<link rel="stylesheet" href="assets/css/ace.css" />
+		<link rel="stylesheet" href="assets/css/ace-rtl.css" />
+		<link rel="stylesheet" href="assets/css/ace-skins.css" />
+
+		<!--[if lte IE 8]>
+		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+		<![endif]-->
+
+		<!-- inline styles related to this page -->
+
+		<!-- ace settings handler -->
+
+		<script src="assets/js/ace-extra.min.js"></script>
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+		<!--[if lt IE 9]>
+		<script src="assets/js/html5shiv.js"></script>
+		<script src="assets/js/respond.min.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		
+
+		<div class="main-container" id="main-container">
+			<script type="text/javascript">
+				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+			</script>
+
+			
+				 <div class="page-content">
+				 
+								
+									<div class="row">	
+													<!-- 하단 -->
+										<table class="table table-nobordered">
+												<tbody>
+													<tr>
+														<td  width="350"  >
+															<div class="col-xs-12">		
+															 <div class="input-group col-xs-12 ">		
+																		 <span class=" blue ">심각도 선택</span>
+																	 </div>
+																	 <div class="input-group col-xs-12 ">		
+																	<form class="form-inline " >
+																	
+																	<div data-toggle="buttons" class="btn-group btn-corner  " >
+																	<label class="btn btn-xs btn-clear active ">
+																		<input type="checkbox" value="1" />
+																		<i class="icon-circle-blank   bigger-110"></i>
+																		CLEAR
+																	</label>
+					
+																	<label class="btn btn-xs btn-attention active">
+																		<input type="checkbox" value="2" />
+																		<i class="icon-warning-sign bigger-110"></i>
+																		ATTENTION
+																	</label>
+					
+																	<label class="btn btn-xs btn-trouble active">
+																		<input type="checkbox" value="3" />
+																		<i class="icon-minus-sign bigger-110"></i>
+																		TROUBLE
+																	</label>
+																		<label class="btn btn-xs btn-critical active">
+																		<input type="checkbox" value="3" />
+																		<i class="icon-bolt  bigger-110"></i>
+																		CRITICAL
+																	</label>
+																	</div>
+													       			</form>
+																	</div>	
+																	</div>	
+																</td>
+
+																<td  >
+																	 <div class="col-xs-5 ">		
+																		<span class=" blue">리소스 선택</span>
+																		<select class="selectpicker col-xs-12 col-xs-12" id="form-field-1">
+																			<option value="">&nbsp;</option>
+																			<option value="AL">Alabama</option>
+																			<option value="AK">Alaska</option>
+																			<option value="AZ">Arizona</option>
+																		</select>
+																	</div>	
+																			
+																	<div class="col-xs-5 ">		
+																		<span class="blue">리소스 이름</span>
+																		<input type="text" id="form-field-1" placeholder="Username" class="col-xs-12 col-xs-12" />
+																	</div>	
+																			
+													       		</td>
+													       			
+													       		<td width="15% " nowrap>
+													       		  <div class="input-group col-xs-6 ">
+													       		 <span class="blue ">확인여부</span>
+													       		 <form class=" form-inline ">
+																	<div class="radio ">
+																			<label>
+																			<input name="form-field-radio" type="radio"  />
+																			 전체
+																			</label>
+																	</div>	
+																	<div class="radio">	
+																		<label>
+																			<input name="form-field-radio" type="radio" />
+																			 확인
+																		</label>
+																	</div>	
+																	
+																	<div class="radio">	
+																		<label>
+																		<input name="form-field-radio" type="radio" />
+																		 미확인
+																		</label>
+																	</div>	
+																</form>						
+																</div>		
+																</td>
+															</tr>
+														</tbody>
+													</table>
+													<!-- 하단 END-->
+											
+														
+							
+							
+
+						</div>		
+						
+						<div class="space-6"></div>
+			
+					
+								<div class="row">
+									<div class="col-xs-12">
+										<h4 class="header smaller ">
+										<i class="icon-emergencylight red"></i> 알람 개수 <small>( 1-8 / 8 )</small>
+											<div style="margin-bottom:20px" class="pull-right">
+											<a  style="margin-right:10px;" ><i class="icon-file-excel-o icon-large"></i></a>
+											
+											<button class="btn btn-default"><i class="icon-edit"></i>편집
+											</button>
+											<div >
+										</h4>
+											
+											
+											<table id="sample-table-1" class="table  table-hover ">
+												<thead>
+													<tr>
+														<th width="4%">심각도</th>
+														<th class="hidden-480" width="7%" nowrap><a href="#" >알람이름</a></th>
+														<th width="7%" nowrap>
+														<a href="#" >발생시간</a>
+														</th>
+														<th nowrap><a href="#">대상</a></th>
+														<th ><a href="#" >컨디션로그</a></th>
+														<th width="22%"><a href="#" >경로</a></th>
+														<th width="5%" class="center" nowrap>확인자</th>
+													</tr>
+												</thead>
+
+												<tbody>
+													<tr>
+														
+														<td>
+															<span class="label label-event label-clear">CLEAR</span>
+														</td>
+														<td>testalarm2</td>
+														<td nowrap ><a href="#">2014-06-17</a></td>
+														<td nowrap><i class="icon-cog  bigger-110 blue"></i>
+														<a href="#">RMON:V2 Port 7 on Unit 1</a></td>
+
+														<td >
+															<a href="#">Metric Value Threashold [ 트래픽 Tx:20.8 kbps CRITICAL (> 2.0 bps)]</a>
+														</td>
+
+														<td>
+															<div class="visible-md visible-lg hidden-sm hidden-xs btn-group">
+																Root>NKIA_SWITCH>Network Interfaces 							</div>
+
+															<div class="visible-xs visible-sm hidden-md hidden-lg">
+																<div class="inline position-relative">
+																	<ul>
+																		<li>
+																			<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																				<span class="red">
+																					<i class="icon-trash bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</td>
+														<td class="center">
+															<i class="icon-check   bigger-130 blue"></i>
+															<span class="lbl">admin</span>
+															
+														</td>
+													</tr>
+
+														<tr>
+														
+														<td>
+															<span class="label label-event label-attention">ATTENTION</span>
+														</td>
+														<td>testalarm2</td>
+														<td ><a href="#">2014-06-17</a></td>
+														<td><i class="icon-cog  bigger-110 blue"></i>
+														<a href="#">RMON:V2 Port 7 on Unit 1</a></td>
+
+														<td >
+															<a href="#">Metric Value Threashold [ 트래픽 Tx:20.8 kbps CRITICAL (> 2.0 bps)]</a>
+														</td>
+
+														<td>
+															<div class="visible-md visible-lg hidden-sm hidden-xs btn-group">
+																Root>NKIA_SWITCH>Network Interfaces 							</div>
+
+															<div class="visible-xs visible-sm hidden-md hidden-lg">
+																<div class="inline position-relative">
+																	
+																		<li>
+																			<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																				<span class="red">
+																					<i class="icon-trash bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</td>
+														<td class="center">
+															<i class="icon-check   bigger-130 light-grey"></i>
+															<span class="lbl">미확인</span>
+														</td>
+													</tr>
+														<tr>
+														
+														<td>
+															<span class="label label-event label-trouble">TROUBLE</span>
+														</td>
+														<td>testalarm2</td>
+														<td ><a href="#">2014-06-17</a></td>
+														<td><i class="icon-cog  bigger-110 red"></i>
+														<a href="#">RMON:V2 Port 7 on Unit 1</a></td>
+
+														<td >
+															<a href="#">Metric Value Threashold [ 트래픽 Tx:20.8 kbps CRITICAL (> 2.0 bps)]</a>
+														</td>
+
+														<td>
+															<div class="visible-md visible-lg hidden-sm hidden-xs btn-group">
+																Root>NKIA_SWITCH>Network Interfaces 							</div>
+
+															<div class="visible-xs visible-sm hidden-md hidden-lg">
+																<div class="inline position-relative">
+																	<ul>
+																		<li>
+																			<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																				<span class="red">
+																					<i class="icon-trash bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</td>
+													<td class="center">
+															<i class="icon-check   bigger-130 light-grey"></i>
+															<span class="lbl">미확인</span>
+														</td>
+													</tr>
+													
+													<tr>
+														
+														<td>
+															<span class="label label-event label-critical">CRITICAL</span>
+														</td>
+														<td>testalarm2</td>
+														<td ><a href="#">2014-06-17  </a> </td>
+														<td><i class="icon-cog  bigger-110 red"></i>
+														<a href="#">RMON:V2 Port 7 on Unit 1</a></td>
+
+														<td >
+															<a href="#">Metric Value Threashold [ 트래픽 Tx:20.8 kbps CRITICAL (> 2.0 bps)]</a>
+														</td>
+
+														<td>
+															<div class="visible-md visible-lg hidden-sm hidden-xs btn-group">
+																Root>NKIA_SWITCH>Network Interfaces 							</div>
+
+															<div class="visible-xs visible-sm hidden-md hidden-lg">
+																<div class="inline position-relative">
+																	
+																		<li>
+																			<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																				<span class="red">
+																					<i class="icon-trash bigger-120"></i>
+																				</span>
+																			</a>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</td>
+														<td class="center">
+															<i class="icon-check   bigger-130 light-grey"></i>
+															<span class="lbl">미확인</span>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+											
+										</div><!-- /.table-responsive -->
+									
+								
+										</div><!-- /col-xs-12 -->
+									</div><!-- /row -->
+
+
+				
+			
+			
+				
+			</div><!-- /.page contents -->
+
+			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+				<i class="icon-double-angle-up icon-only bigger-110"></i>
+			</a>
+		</div><!-- /.main-container -->
+
+		<!-- basic scripts -->
+
+		<!--[if !IE]> -->
+
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+		</script>
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+<script type="text/javascript">
+ window.jQuery || document.write("<script src='assets/js/jquery-1.10.2.min.js'>"+"<"+"/script>");
+</script>
+<![endif]-->
+
+		<script type="text/javascript">
+			if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		</script>
+		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="assets/js/typeahead-bs2.min.js"></script>
+
+		<!-- page specific plugin scripts -->
+
+		<!--[if lte IE 8]>
+		  <script src="assets/js/excanvas.min.js"></script>
+		<![endif]-->
+
+		<script src="assets/js/jquery-ui-1.10.3.custom.min.js"></script>
+		<script src="assets/js/jquery.ui.touch-punch.min.js"></script>
+		<script src="assets/js/chosen.jquery.min.js"></script>
+		<script src="assets/js/fuelux/fuelux.spinner.min.js"></script>
+		<script src="assets/js/date-time/bootstrap-datepicker.min.js"></script>
+		<script src="assets/js/date-time/bootstrap-timepicker.min.js"></script>
+		<script src="assets/js/date-time/moment.min.js"></script>
+		<script src="assets/js/date-time/daterangepicker.min.js"></script>
+		<script src="assets/js/bootstrap-colorpicker.min.js"></script>
+		<script src="assets/js/jquery.knob.min.js"></script>
+		<script src="assets/js/jquery.autosize.min.js"></script>
+		
+		<script src="assets/js/jquery.inputlimiter.1.3.1.min.js"></script>
+		<script src="assets/js/jquery.maskedinput.min.js"></script>
+		<script src="assets/js/bootstrap-tag.min.js"></script>
+
+		<!-- ace scripts -->
+
+		<script src="assets/js/ace-elements.min.js"></script>
+		<script src="assets/js/ace.min.js"></script>
+
+		<!-- inline scripts related to this page -->
+
+		<script type="text/javascript">
+			
+			
+	
+		</script>
+	</body>
+</html>

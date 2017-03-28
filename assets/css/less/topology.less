@@ -1,0 +1,56 @@
+@import "bootstrap/variables.less";
+@import "bootstrap/mixins.less";
+@import "variables.less";
+@import "mixins.less";
+
+.canvas{border:1px solid #95A2AB; width:100%;}
+.cygnus-droppable {
+			background-color:#E5F4FC;
+			border:2px dashed #10BCC3;
+			box-sizing:content-box;
+		}
+
+	
+#editNodeDiv {
+	color: #000;
+    background-color: #FFFFFF;
+    border: 1px solid #F47320;
+    display: none;
+    text-align: justify;
+    z-index: 5;
+    position: absolute;
+    width: 350px;
+    padding: 15px 20px 15px 20px;
+    top: 31px;
+    box-shadow: 0 3px 23px rgba(0,0,0,0.45);
+   .form-group{margin-bottom:8px;}
+   .form-horizontal .form-group {
+    margin-right:0; 
+    margin-left: -15px;
+    
+		}
+}
+
+#editNodeDiv:before {
+    right: 0px;
+    width: 100%;
+    height: 5px;
+    background: #F47320;
+    position: absolute;
+    z-index: 2;
+    content: "";
+    top: 0px;
+}				
+	#editNodeDiv p {
+	 margin: 10px 0 0 0;
+    
+	 font-size: 0.917em;
+		}
+		
+		.rightPosition {
+			right: 0px;		
+		}
+		
+		.leftPosition {
+			left: 0px;
+		}		

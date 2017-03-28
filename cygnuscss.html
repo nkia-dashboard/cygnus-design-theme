@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Cygnus UI Guide</title>
+
+		<meta name="description" content="This is page-header (.page-header &gt; h1)" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- basic styles -->
+
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+
+		<!--[if IE 7]>
+		  <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css" />
+		<![endif]-->
+
+		<!-- page specific plugin styles -->
+
+		<link rel="stylesheet" href="assets/css/prettify.css" />
+
+		<!-- fonts -->
+
+		<link rel="stylesheet" href="assets/css/ace-fonts.css" />
+
+		<!-- ace styles -->
+
+		<link rel="stylesheet" href="assets/css/ace.css" />
+		<link rel="stylesheet" href="assets/css/ace-rtl.css" />
+		<link rel="stylesheet" href="assets/css/ace-skins.css" />
+
+		<!--[if lte IE 8]>
+		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+		<![endif]-->
+
+		<!-- inline styles related to this page -->
+
+		<!-- ace settings handler -->
+
+		<script src="assets/js/ace-extra.min.js"></script>
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+		<!--[if lt IE 9]>
+		<script src="assets/js/html5shiv.js"></script>
+		<script src="assets/js/respond.min.js"></script>
+		<![endif]-->
+		
+		
+		
+		
+		<script type="text/javascript"
+          src="https://www.google.com/jsapi?autoload={
+            'modules':[{
+              'name':'visualization',
+              'version':'1',
+              'packages':['corechart']
+            }]
+          }"></script>
+
+  
+<script src='http://syntaxhighlighter.googlecode.com/svn/trunk/Scripts/shCore.js' type='text/javascript'></script>  
+		<script src='http://syntaxhighlighter.googlecode.com/svn/trunk/Scripts/shBrushCpp.js' type='text/javascript'></script>  
+		<script src='http://syntaxhighlighter.googlecode.com/svn/trunk/Scripts/shBrushCSharp.js' type='text/javascript'></script>  
+		<script src='http://syntaxhighlighter.googlecode.com/svn/trunk/Scripts/shBrushCss.js' type='text/javascript'></script>  
+		<script src='http://syntaxhighlighter.googlecode.com/svn/trunk/Scripts/shBrushDelphi.js' type='text/javascript'></script>  
+		<script src='http://syntaxhighlighter.googlecode.com/svn/trunk/Scripts/shBrushJava.js' type='text/javascript'></script>  
+		<script src='http://syntaxhighlighter.googlecode.com/svn/trunk/Scripts/shBrushJScript.js' type='text/javascript'></script>  
+		<script src='http://syntaxhighlighter.googlecode.com/svn/trunk/Scripts/shBrushPhp.js' type='text/javascript'></script>  
+		<script src='http://syntaxhighlighter.googlecode.com/svn/trunk/Scripts/shBrushPython.js' type='text/javascript'></script>  
+		<script src='http://syntaxhighlighter.googlecode.com/svn/trunk/Scripts/shBrushRuby.js' type='text/javascript'></script>  
+		<script src='http://syntaxhighlighter.googlecode.com/svn/trunk/Scripts/shBrushSql.js' type='text/javascript'></script>  
+		<script src='http://syntaxhighlighter.googlecode.com/svn/trunk/Scripts/shBrushVb.js' type='text/javascript'></script>  
+		<script src='http://syntaxhighlighter.googlecode.com/svn/trunk/Scripts/shBrushXml.js' type='text/javascript'></script>  
+	</head>
+
+		<body>
+	<div class="menubar menubarlightgrey menubar-fixed overflow-auto  id="sidebar"><!-- menubarlightgrey -->
+			<script type="text/javascript">
+				try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
+				</script>															<!-- menulogolightgrey -->
+			  <div class="menulogolightgrey center "><a href="cover.html"><img src="assets/images/polestarlogo_whitebg.png"></a></div>
+				<ul class="nav menunav-list ">
+				
+					<li>
+						<a href="cygnusdashboard.html" class="menulightgrey" ><!-- menulightgrey -->
+						<i class="icon-dashboard"></i>
+						<span class="navmenu-text">대시보드</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="menulightgrey">
+						<i class="icon-bar-chart"></i>
+						<span class="navmenu-text">성능통계</span>
+						</a>
+					</li>
+					<li>
+						<a  href="#" class="menulightgrey">
+						<i class="icon-emergencylight"></i>
+						<span class="navmenu-text">알람콘솔</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="menulightgrey">
+						<i class="icon-win-warning"></i>
+						<span class="navmenu-text">이벤트뷰어</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="menulightgrey">
+						<i class="icon-file-text"></i>
+						<span class="navmenu-text">보고서</span>
+						</a>
+					</li>
+					<li>
+						<a href="cygnustheme09.html" class="menulightgrey"><i class="icon-cogs"></i>
+						<span class="navmenu-text">관리자</span></a>
+					</li>
+				</ul>
+		</div>
+		
+		
+		
+		<div class="navbar navbar-default navbar-fixed-top navbarblueskin " id="navbar">
+			<script type="text/javascript">
+				try{ace.settings.check('navbar' , 'fixed')}catch(e){}
+			</script>
+
+			<div class="navbar-container" id="navbar-container">
+				<div class="navbar-header pull-left">
+					<a href="cover.html" class="navbar-brand margin-75">
+						<h1 class="numberfont">UI CSS Guide</h1>
+					</a><!-- /.brand -->
+				</div><!-- /.navbar-header -->
+
+				<div class="navbar-header pull-right" role="navigation">
+					<ul class="nav ace-nav">
+						<li class="grey">
+							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+								<i class="icon-tasks"></i>
+								<span class="badge badge-grey">4</span>
+							</a>
+
+							<ul class="pull-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
+								<li class="dropdown-header">
+									<i class="icon-ok"></i>
+									4 Tasks to complete
+								</li>
+
+								<li>
+									<a href="#">
+										<div class="clearfix">
+											<span class="pull-left">Software Update</span>
+											<span class="pull-right">65%</span>
+										</div>
+
+										<div class="progress progress-mini ">
+											<div style="width:65%" class="progress-bar "></div>
+										</div>
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										<div class="clearfix">
+											<span class="pull-left">Hardware Upgrade</span>
+											<span class="pull-right">35%</span>
+										</div>
+
+										<div class="progress progress-mini ">
+											<div style="width:35%" class="progress-bar progress-bar-danger"></div>
+										</div>
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										<div class="clearfix">
+											<span class="pull-left">Unit Testing</span>
+											<span class="pull-right">15%</span>
+										</div>
+
+										<div class="progress progress-mini ">
+											<div style="width:15%" class="progress-bar progress-bar-warning"></div>
+										</div>
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										<div class="clearfix">
+											<span class="pull-left">Bug Fixes</span>
+											<span class="pull-right">90%</span>
+										</div>
+
+										<div class="progress progress-mini progress-striped active">
+											<div style="width:90%" class="progress-bar progress-bar-success"></div>
+										</div>
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										See tasks with details
+										<i class="icon-arrow-right"></i>
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="purple">
+							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+								<i class="icon-bell-alt icon-animated-bell"></i>
+								<span class="badge badge-important">8</span>
+							</a>
+
+							<ul class="pull-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-close">
+								<li class="dropdown-header">
+									<i class="icon-warning-sign"></i>
+									8 Notifications
+								</li>
+
+								<li>
+									<a href="#">
+										<div class="clearfix">
+											<span class="pull-left">
+												
+												New Comments
+											</span>
+											<span class="pull-right badge badge-info">+12</span>
+										</div>
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										
+										Bob just signed up as an editor ...
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										<div class="clearfix">
+											<span class="pull-left">
+												
+												New Orders
+											</span>
+											<span class="pull-right badge badge-success">+8</span>
+										</div>
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										<div class="clearfix">
+											<span class="pull-left">
+												
+												Followers
+											</span>
+											<span class="pull-right badge badge-info">+11</span>
+										</div>
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										See all notifications
+										<i class="icon-arrow-right"></i>
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="blue">
+							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+								<i class="icon-envelope icon-animated-vertical"></i>
+								<span class="badge badge-success">5</span>
+							</a>
+
+							<ul class="pull-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
+								<li class="dropdown-header">
+									<i class="icon-envelope-alt"></i>
+									5 Messages
+								</li>
+
+								<li>
+									<a href="#">
+										
+										<span class="msg-body">
+											<span class="msg-title">
+												<span class="blue">Alex:</span>
+												Ciao sociis natoque penatibus et auctor ...
+											</span>
+
+											<span class="msg-time">
+												<i class="icon-time"></i>
+												<span>a moment ago</span>
+											</span>
+										</span>
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										
+										<span class="msg-body">
+											<span class="msg-title">
+												<span class="blue">Susan:</span>
+												Vestibulum id ligula porta felis euismod ...
+											</span>
+
+											<span class="msg-time">
+												<i class="icon-time"></i>
+												<span>20 minutes ago</span>
+											</span>
+										</span>
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										
+										<span class="msg-body">
+											<span class="msg-title">
+												<span class="blue">Bob:</span>
+												Nullam quis risus eget urna mollis ornare ...
+											</span>
+
+											<span class="msg-time">
+												<i class="icon-time"></i>
+												<span>3:15 pm</span>
+											</span>
+										</span>
+									</a>
+								</li>
+
+								<li>
+									<a href="inbox.html">
+										See all messages
+										<i class="icon-arrow-right"></i>
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li >
+							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
+								
+								<span class="user-info">
+									<small>Welcome,</small>
+									Jason
+								</span>
+
+								<i class="icon-caret-down"></i>
+							</a>
+
+							<ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+								<li>
+									<a href="#">
+										<i class="icon-cog"></i>
+										Settings
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										<i class="icon-user"></i>
+										Profile
+									</a>
+								</li>
+
+								<li class="divider"></li>
+
+								<li>
+									<a href="#">
+										<i class="icon-off"></i>
+										Logout
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul><!-- /.ace-nav -->
+				</div><!-- /.navbar-header -->
+			</div><!-- /.container -->
+		</div>
+		
+		
+		
+		
+		
+		
+		<div class="main-container margin-t45" id="main-container">
+			<script type="text/javascript">
+				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+			</script>
+
+			<div class="main-container-inner">
+				<a class="menu-toggler" id="menu-toggler" href="#">
+					<span class="menu-text"></span>
+				</a>
+
+				<div class="sidebar sidebar-fixed  " id="sidebar">
+					<script type="text/javascript">
+						try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
+					</script>
+
+				
+					<div id="sidebar-shortcuts" class="sidebar-shortcuts">
+						<div class="breadcrumbs margin-t45" id="uiguide">
+						<span >디자인 스타일 가이드 </span>
+						</div>
+					</div>
+					
+					<ul class="nav nav-list" >
+						<li ><a href="#" class="dropdown-toggle"><i class="icon-nkia"></i><span class="menu-text">
+							Cygnus 레이아웃 </span><b class="arrow icon-angle-down"></b>
+						   </a>
+						   <ul class="submenu">
+								<li><a href="cygnustheme01.html"><i class="icon-leaf"></i>리소스화면 탭구조(검색)</a></li>
+								<li><a href="cygnustheme02.html"><i class="icon-leaf"></i>리소스화면 탭구조(기본)</a></li>
+								<li><a href="cygnustheme03.html"><i class="icon-leaf"></i>리소스화면 탭구조(서브탭)</a></li>
+								<li><a href="cygnusdashboard.html"><i class="icon-list-alt"></i><span class="menu-text"> Dashboard </span></a></li>
+								<li><a href="cygnusdefault.html"><i class="icon-nkia"></i><span class="menu-text">Cygnus 요약화면 </span></a></li>
+								<li><a href="cygnustheme04.html"><i class="icon-leaf"></i>레이아웃#4 성능가로</a></li>
+								<li><a href="cygnustheme05.html"><i class="icon-leaf"></i>레이아웃#5 성능테이블</a></li>
+								<li><a href="cygnustheme06.html"><i class="icon-leaf"></i>레이아웃#6 성능차트</a></li>
+								<li><a href="cygnustheme07.html"><i class="icon-leaf"></i>레이아웃#7 모니터링</a></li>
+								<li><a href="cygnustheme08.html"><i class="icon-leaf"></i>레이아웃#8이벤트뷰어</a></li>
+								<li><a href="cygnustheme09.html"><i class="icon-leaf"></i>레이아웃#9관리자</a></li>    <li><a href="cygnustheme-process.html"><i class="icon-leaf"></i>프로세스화면 개선 </a></li>  
+								<li><a href="cygnustitle01.html"><i class="icon-leaf"></i>타이틀 규칙</a></li>  
+								<li><a href="cygnusloopgrid02.html"><i class="icon-leaf"></i>LoopGrid UI 규칙 </a></li>
+							</ul>						
+						</li>
+						<li><a href="#" class="dropdown-toggle"><i class="icon-picture"></i><span class="menu-text"> 						
+							ICON </span><b class="arrow icon-angle-down"></b></a>
+							<ul class="submenu">
+								<li><a href="Iconfont-index.html"><i class="icon-picture "></i><span class="menu-text"> ICON bigsize </span></a></li>
+						    	<li><a href="Iconfont-smallindex.html"><i class="icon-picture "></i><span class="menu-text">ICON smallsize</span></a></li>
+							</ul>
+						</li>
+						<li ><a href="typography.html"><i class="icon-text-width"></i><span class="menu-text"> 							
+							 Typography </span>
+							</a>
+						</li>
+						<li class="active" ><a href="cygnuscss.html"><i class="icon-binarylog"></i><span class="menu-text">
+							 Etc CSS  </span>
+							</a>
+						</li>
+							<li ><a href="#" class="dropdown-toggle"><i class="icon-taskgroup"></i><span class="menu-text"> 							
+							UI Elements 1 </span><b class="arrow icon-angle-down"></b>
+							</a>
+							<ul class="submenu">
+								<li><a href="buttons.html"><i class="icon-double-angle-right"></i>Buttons </a></li>  
+								<li><a href="labels.html"><i class="icon-double-angle-right"></i>Labels & Badge</a></li>    
+								<li><a href="alerts.html"><i class="icon-double-angle-right"></i>Alerts </a></li> 
+								<li><a href="tabs.html"><i class="icon-double-angle-right"></i>Tabs </a></li> 
+								<li><a href="progress-bar.html"><i class="icon-double-angle-right"></i>Progress-bar</a></li>
+								<li><a href="tables.html"><i class="icon-double-angle-right"></i>Table</a></li>
+								<li><a href="accordion.html"><i class="icon-double-angle-right"></i>Accordion</a></li>
+							</ul>
+						</li>
+						<li><a href="#" class="dropdown-toggle"><i class="icon-taskgroup"></i><span class="menu-text"> 							
+							UI Elements 2 </span><b class="arrow icon-angle-down"></b>
+							</a>
+							<ul class="submenu">
+								<li><a href="checkboxradio.html"><i class="icon-double-angle-right"></i>Checkboxes & Radio </a></li>
+								<li><a href="modal.html"><i class="icon-double-angle-right"></i>Modal </a></li>
+								
+								<li><a href="widgets.html"><i class="icon-double-angle-right"></i>Widgets</a></li>
+								<li><a href="nestable-list.html"><i class="icon-double-angle-right"></i>Nestable Lists</a></li>
+								<li><a href="form.html"><i class="icon-double-angle-right"></i>Form Type1  </a></li>
+								<li><a href="formtype2.html"><i class="icon-double-angle-right"></i>Form Type2</a></li>
+								<li><a href="elements.html"><i class="icon-double-angle-right"></i>Tooltips/Popovers/Gritter</a></li>  
+								<li><a href="spinner-wells-dropdowns.html"><i class="icon-double-angle-right"></i>Spinner/Wells/Dropdowns</a></li>
+								<li><a href="jquery-ui.html"><i class="icon-double-angle-right"></i>jQuery UI</a></li>
+							</ul>
+						</li>
+						
+						<li><a href="#" class="dropdown-toggle"><i class=" icon-pagefile"></i><span class="menu-text">
+						Other Pages</span>	<b class="arrow icon-angle-down"></b>
+						   </a>
+							<ul class="submenu">
+								<li><a href="faq.html"><i class="icon-double-angle-right"></i>FAQ</a></li>
+								<li><a href="grid.html"><i class="icon-double-angle-right"></i>Grid</a></li>
+							</ul>
+						</li>
+					</ul><!-- /.nav-list -->
+
+					<div class="sidebar-collapse" id="sidebar-collapse">
+						<i class="icon-double-angle-left" data-icon1="icon-double-angle-left" data-icon2="icon-double-angle-right"></i>
+					</div>
+
+					<script type="text/javascript">
+						try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}
+					</script>
+				</div>
+
+				<div class="main-content ">
+					<div class="breadcrumbs margin-75" id="breadcrumbs">
+						<script type="text/javascript">
+							try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+						</script>
+
+						<ul class="breadcrumb">
+							<li>
+								<i class="icon-home home-icon"></i>
+								<a href="#">Home</a>
+							</li>
+							<li class="active">브래드크럼</li>
+						</ul><!-- .breadcrumb -->
+					</div>
+
+			
+			<div class="page-content margin-75">
+						<div class="page-header">
+							<h1>
+							<span  class="icon-stack">
+								<i class="icon-binarylog icon-large"></i>
+								</span>
+								추가 스타일 작성을 위한 CSS 코드참조
+								<small>
+									이벤트 뷰어 템플릿
+								</small>
+							</h1>
+						</div><!-- /.page-header -->
+
+						<div class="row">
+							<div class="col-xs-12">
+								<!-- PAGE CONTENT BEGINS -->
+<textarea class="cpp" name="code">//HEIGHT ( 바응형 웹 테스트 후 필요한 화면에만 사용 )
+.height25  { height: 25px !important; }
+.height30  { height: 30px !important; }
+.height35  { height: 35px !important; }
+.height50  { height: 50px !important; }
+.height100 { height: 100px!important; }
+.height200 { height: 200px !important; }
+.height250 { height: 250px !important; }
+.height300 { height: 300px !important; }
+.height400 { height: 400px !important; }
+.height500 { height: 500px !important; }
+.height600 { height: 600px !important; }
+
+//WIDTH ( 바응형 웹 테스트 후 필요한 화면에만 사용 )
+.width10   { width: 10% !important; }
+.width20   { width: 20% !important; }
+.width24   { width: 24% !important; }
+.width25   { width: 25% !important; }
+.width30   { width: 30% !important; }
+.width40   { width: 40% !important; }
+.width45   { width: 45% !important; }
+.width54   { width: 54% !important; }
+.width50   { width: 50% !important; }
+.width100  { width: 100% !important; }
+
+//MINWIDTH( 바응형 웹 테스트 후 필요한 화면에만 사용 )
+.minwidth50   { min-width: 50px !important; }
+.minwidth60   { min-width: 60px !important; }
+.minwidth80   { min-width: 80px !important; }
+.minwidth100  { min-width: 100px !important; }
+.minwidth150  { min-width: 150px !important; }
+.minwidth200  { min-width: 200px !important; }
+.minwidth250  { min-width: 250px !important; }
+.minwidth300  { min-width: 300px !important; }
+.minwidth350  { min-width: 350px !important; }
+.minwidth366  { min-width: 366px !important; }
+.minwidth400  { min-width: 400px !important; }
+.minwidth500  { min-width: 500px !important; }
+.minwidth600  { min-width: 600px !important; }
+.minwidth700  { min-width: 700px !important; }
+.minwidth800  { min-width: 800px !important; }
+.minwidth900  { min-width: 900px !important; }
+.minwidth1000 { min-width: 1000px !important; }
+.minwidth1200 { min-width: 1200px !important; }
+.minwidth1400 { min-width: 1400px !important; }
+
+//LEFT MARGIN
+.margin-5   { margin-left: 5px !important; }
+.margin-10  { margin-left: 10px !important; }
+.margin-15  { margin-left: 15px !important; }
+.margin-20  { margin-left: 20px !important; }
+.margin-70  { margin-left: 70px !important; }
+.margin-75  { margin-left: 75px !important; }
+.margin-80  { margin-left: 80px !important; }
+.margin-305 { margin-left: 305px !important; }
+
+//MARGIN LEFT RIGHT 
+.margin-lr5  { margin-left: 5px !important;  margin-right: 5px !important; }
+.margin-lr10 { margin-left: 10px !important; margin-right: 10px !important;}
+.margin-lr15 { margin-left: 15px !important; margin-right: 15px !important;}
+.margin-lr20 { margin-left: 20px !important; margin-right: 20px !important; }
+
+//TOP BOTTOM MARGIN
+.margin-h2  { margin-top: 2px !important; margin-bottom: 2px !important; }
+.margin-h5  { margin-top: 5px !important; margin-bottom: 5px !important; }
+.margin-h6  { margin-top: 6px !important; margin-bottom: 6px !important; }
+.margin-h7  { margin-top: 7px !important; margin-bottom: 7px !important; }
+.margin-h8  { margin-top: 8px !important; margin-bottom: 8px !important; }
+.margin-h9  { margin-top: 9px !important; margin-bottom: 9px !important; }
+.margin-h10 { margin-top: 10px !important; margin-bottom: 10px !important; }
+.margin-h15 { margin-top: 15px !important; margin-bottom: 15px !important; }
+.margin-h20 { margin-top: 20px !important; margin-bottom: 20px !important; }
+
+//TOP MARGIN
+.margin-t5    { margin-top: 5px !important; }
+.margin-t6    { margin-top: 6px !important; }
+.margin-t7    { margin-top: 7px !important; }
+.margin-t8    { margin-top: 8px !important; }
+.margin-t9    { margin-top: 9px !important;  }
+.margin-t10   { margin-top: 10px !important; }
+.margin-t15   { margin-top: 15px !important; }
+.margin-t20   { margin-top: 20px !important;  }
+.margin-t30   { margin-top: 30px !important;  }
+.margin-t40   { margin-top: 40px !important;  }
+.margin-t45   { margin-top: 45px !important;  }
+.margin-t50   { margin-top: 50px !important;  }
+
+//NEGATIVE TOP MARGIN
+.negativetop10 { margin-top: -10px !important;}
+.negativetop20 {margin-top: -20px !important;}
+.negativetop30 {margin-top: -30px !important;}
+.negativetop40 {margin-top: -40px !important;}
+.negativetop50 {margin-top: -50px !important;}
+.negativetop60 {margin-top: -60px !important;}
+.negativetop70 {margin-top: -70px !important;}
+.negativetop80 {margin-top: -80px !important;}
+.negativetop90 {margin-top: -90px !important;}
+.negativetop100 {margin-top: -100px !important;}
+
+//NEGATIVE BOTTOM MARGIN
+.negativebottom10 {margin-bottom: -10px !important;}
+.negativebottom20 {margin-bottom: -20px !important;}
+.negativebottom30 {margin-bottom: -30px !important;}
+.negativebottom40 {margin-bottom: -40px !important;}
+.negativebottom50 {margin-bottom: -50px !important;}
+.negativebottom60 {margin-bottom: -60px !important;}
+.negativebottom70 {margin-bottom: -70px !important;}
+.negativebottom80 {margin-bottom: -80px !important;}
+.negativebottom90 {margin-bottom: -90px !important;}
+.negativebottom100 {margin-bottom: -100px !important;}
+
+//POSITIVE TOP MARGIN
+.positivetop10 {margin-top: 10px !important;}
+.positivetop20 {margin-top: 20px !important;}
+.positivetop30 {margin-top: 30px !important;}
+.positivetop40 {margin-top: 40px !important;}
+.positivetop50 {margin-top: 50px !important;}
+.positivetop60 {margin-top: 60px !important;}
+.positivetop70 {margin-top: 70px !important;}
+.positivetop80 {margin-top: 80px !important;}
+.positivetop90 {margin-top: 90px !important;}
+.positivetop100 {margin-top: 100px !important;}
+
+//POSITIVE BOTTOM MARGIN
+.positivebottom10 {margin-bottom: 10px !important;}
+.positivebottom20 {margin-bottom: 20px !important;}
+.positivebottom30 {margin-bottom: 30px !important;}
+.positivebottom40 {margin-bottom: 40px !important;}
+.positivebottom50 {margin-bottom: 50px !important;}
+.positivebottom60 {margin-bottom: 60px !important;}
+.positivebottom70 {margin-bottom: 70px !important;}
+.positivebottom80 {margin-bottom: 80px !important;}
+.positivebottom90 {margin-bottom: 90px !important;}
+.positivebottom100 { margin-bottom: 100px !important;}
+
+//PADDING 
+.padding-t20  { padding-top: 20px !important; }
+.padding-b20  { padding-bottom: 20px !important; }
+
+//BORDER  
+.borderbottom {border-bottom:1px solid #ccd1d5 !important;}
+.bordertop    {border-top:1px solid #ccd1d5 !important;}
+.borderleft   {border-left:1px solid #ccd1d5 !important;}
+.borderright  {border-right:1px solid #ccd1d5 !important;}
+
+//FLOAT 
+.pull-left {float: left !important;}
+.pull-right {float: right !important;}
+.floatleft    {float:left ; }
+.floatright   {float:right; }
+
+//FONT ICON SIZE BIGGER
+.bigger-110 {font-size: 110%;}
+.bigger-120 {font-size: 120%;}
+.bigger-130 {font-size: 130%;}
+.bigger-140 {font-size: 140%;}
+.bigger-150 {font-size: 150%;}
+.bigger-160 {font-size: 160%;}
+.bigger-170 {font-size: 170%;}
+.bigger-180 {font-size: 180%;}
+.bigger-190 {font-size: 190%;}
+.bigger-200 {font-size: 200%;}
+.bigger-210 {font-size: 210%;}
+.bigger-220 {font-size: 220%;}
+.bigger-230 {font-size: 230%;}
+.bigger-240 {font-size: 240%;}
+.bigger-250 {font-size: 250%;}
+.bigger-260 {font-size: 260%;}
+.bigger-270 {font-size: 270%;}
+.bigger-280 {font-size: 280%;}
+.bigger-290 {font-size: 290%;}
+.bigger-300 {font-size: 300%;}
+
+//FONT ICON SIZE SMALLER
+.smaller-90 {font-size: 90%;}
+.smaller-80 {font-size: 80%;}
+.smaller-70 {font-size: 70%;}
+.smaller-60 {font-size: 60%;}
+.smaller-50 {font-size: 50%;}
+.smaller-40 {font-size: 40%;}
+.smaller-30 {font-size: 30%;}
+.smaller-20 {font-size: 20%;}
+.smaller-75 {font-size: 75%;}								
+								
+//CONTAINER BOX
+.whiteborderbox8  {border:1px solid @tab-border; padding:8px 8px; position:relative; }//@tab-border #ccd1d5
+.whiteborderbox12 {border:1px solid @tab-border; padding:12px 12px; position:relative; }
+.whiteborderbox15 {border:1px solid @tab-border; padding:15px 15px; position:relative; }
+								</textarea>
+				
+					
+								</div><!-- PAGE CONTENT ENDS -->
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content -->
+				</div><!-- /.main-content -->
+
+				
+			</div><!-- /.main-container-inner -->
+
+			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+				<i class="icon-double-angle-up icon-only bigger-110"></i>
+			</a>
+		</div><!-- /.main-container -->
+
+		<!-- basic scripts -->
+
+		<!--[if !IE]> -->
+
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+		</script>
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+<script type="text/javascript">
+ window.jQuery || document.write("<script src='assets/js/jquery-1.10.2.min.js'>"+"<"+"/script>");
+</script>
+<![endif]-->
+
+		<script type="text/javascript">
+			if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		</script>
+		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="assets/js/typeahead-bs2.min.js"></script>
+
+		<!-- page specific plugin scripts -->
+
+		<script src="assets/js/prettify.js"></script>
+
+		<!-- ace scripts -->
+
+		<script src="assets/js/ace-elements.min.js"></script>
+		<script src="assets/js/ace.min.js"></script>
+
+		<!-- inline scripts related to this page -->
+
+		<script type="text/javascript">
+			jQuery(function($) {
+			
+				window.prettyPrint && prettyPrint();
+				$('#id-check-horizontal').removeAttr('checked').on('click', function(){
+					$('#dt-list-1').toggleClass('dl-horizontal').prev().html(this.checked ? '&lt;dl class="dl-horizontal"&gt;' : '&lt;dl&gt;');
+				});
+			
+			})
+			
+			
+			
+			
+		</script>
+		<script type='text/javascript'>  
+			dp.SyntaxHighlighter.BloggerMode();  
+			dp.SyntaxHighlighter.HighlightAll('code');  
+			</script>  
+	</body>
+</html>

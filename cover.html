@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Cygnus Ui Guide</title>
+
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- basic styles -->
+
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+
+		<!--[if IE 7]>
+		  <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css" />
+		<![endif]-->
+
+		<!-- page specific plugin styles -->
+
+		<!-- fonts -->
+
+		<link rel="stylesheet" href="assets/css/ace-fonts.css" />
+
+		<!-- ace styles -->
+
+		<link rel="stylesheet" href="assets/css/ace.css" />
+		<link rel="stylesheet" href="assets/css/ace-rtl.css" />
+		<link rel="stylesheet" href="assets/css/ace-skins.css" />
+
+		<!--[if lte IE 8]>
+		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+		<![endif]-->
+
+		<!-- inline styles related to this page -->
+
+		<!-- ace settings handler -->
+
+		<script src="assets/js/ace-extra.min.js"></script>
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+		<!--[if lt IE 9]>
+		<script src="assets/js/html5shiv.js"></script>
+		<script src="assets/js/respond.min.js"></script>
+		<![endif]-->
+	<script src='http://syntaxhighlighter.googlecode.com/svn/trunk/Scripts/shCore.js' type='text/javascript'></script>  
+		<script src='http://syntaxhighlighter.googlecode.com/svn/trunk/Scripts/shBrushCpp.js' type='text/javascript'></script>  
+		<script src='http://syntaxhighlighter.googlecode.com/svn/trunk/Scripts/shBrushCSharp.js' type='text/javascript'></script>  
+		<script src='http://syntaxhighlighter.googlecode.com/svn/trunk/Scripts/shBrushCss.js' type='text/javascript'></script>  
+		<script src='http://syntaxhighlighter.googlecode.com/svn/trunk/Scripts/shBrushDelphi.js' type='text/javascript'></script>  
+		<script src='http://syntaxhighlighter.googlecode.com/svn/trunk/Scripts/shBrushJava.js' type='text/javascript'></script>  
+		<script src='http://syntaxhighlighter.googlecode.com/svn/trunk/Scripts/shBrushJScript.js' type='text/javascript'></script>  
+		<script src='http://syntaxhighlighter.googlecode.com/svn/trunk/Scripts/shBrushPhp.js' type='text/javascript'></script>  
+		<script src='http://syntaxhighlighter.googlecode.com/svn/trunk/Scripts/shBrushPython.js' type='text/javascript'></script>  
+		<script src='http://syntaxhighlighter.googlecode.com/svn/trunk/Scripts/shBrushRuby.js' type='text/javascript'></script>  
+		<script src='http://syntaxhighlighter.googlecode.com/svn/trunk/Scripts/shBrushSql.js' type='text/javascript'></script>  
+		<script src='http://syntaxhighlighter.googlecode.com/svn/trunk/Scripts/shBrushVb.js' type='text/javascript'></script>  
+		<script src='http://syntaxhighlighter.googlecode.com/svn/trunk/Scripts/shBrushXml.js' type='text/javascript'></script>  
+	</head>
+
+		<body>
+	<div class="menubar menubarlightgrey menubar-fixed overflow-auto  id="sidebar"><!-- menubarlightgrey -->
+			<script type="text/javascript">
+				try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
+				</script>															<!-- menulogolightgrey -->
+			  <div class="menulogolightgrey center "><a href="cover.html"><img src="assets/images/polestarlogo_whitebg.png"></a></div>
+				<ul class="nav menunav-list ">
+				
+					<li>
+						<a href="cygnusdashboard.html" class="menulightgrey" ><!-- menulightgrey -->
+						<i class="icon-dashboard"></i>
+						<span class="navmenu-text">대시보드</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="menulightgrey">
+						<i class="icon-bar-chart"></i>
+						<span class="navmenu-text">성능통계</span>
+						</a>
+					</li>
+					<li>
+						<a  href="#" class="menulightgrey">
+						<i class="icon-emergencylight"></i>
+						<span class="navmenu-text">알람콘솔</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="menulightgrey">
+						<i class="icon-win-warning"></i>
+						<span class="navmenu-text">이벤트뷰어</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="menulightgrey">
+						<i class="icon-file-text"></i>
+						<span class="navmenu-text">보고서</span>
+						</a>
+					</li>
+					<li>
+						<a href="cygnustheme09.html" class="menulightgrey"><i class="icon-cogs"></i>
+						<span class="navmenu-text">관리자</span></a>
+					</li>
+				</ul>
+		</div>
+		
+		
+		
+		<div class="navbar navbar-default navbar-fixed-top navbarblueskin " id="navbar">
+			<script type="text/javascript">
+				try{ace.settings.check('navbar' , 'fixed')}catch(e){}
+			</script>
+
+			<div class="navbar-container" id="navbar-container">
+				<div class="navbar-header pull-left">
+					<a href="cover.html" class="navbar-brand margin-75">
+						<h1 class="numberfont">UI CSS Guide</h1>
+					</a><!-- /.brand -->
+				</div><!-- /.navbar-header -->
+
+				<div class="navbar-header pull-right" role="navigation">
+					<ul class="nav ace-nav">
+						<li class="grey">
+							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+								<i class="icon-tasks"></i>
+								<span class="badge badge-grey">4</span>
+							</a>
+
+							<ul class="pull-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
+								<li class="dropdown-header">
+									<i class="icon-ok"></i>
+									4 Tasks to complete
+								</li>
+
+								<li>
+									<a href="#">
+										<div class="clearfix">
+											<span class="pull-left">Software Update</span>
+											<span class="pull-right">65%</span>
+										</div>
+
+										<div class="progress progress-mini ">
+											<div style="width:65%" class="progress-bar "></div>
+										</div>
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										<div class="clearfix">
+											<span class="pull-left">Hardware Upgrade</span>
+											<span class="pull-right">35%</span>
+										</div>
+
+										<div class="progress progress-mini ">
+											<div style="width:35%" class="progress-bar progress-bar-danger"></div>
+										</div>
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										<div class="clearfix">
+											<span class="pull-left">Unit Testing</span>
+											<span class="pull-right">15%</span>
+										</div>
+
+										<div class="progress progress-mini ">
+											<div style="width:15%" class="progress-bar progress-bar-warning"></div>
+										</div>
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										<div class="clearfix">
+											<span class="pull-left">Bug Fixes</span>
+											<span class="pull-right">90%</span>
+										</div>
+
+										<div class="progress progress-mini progress-striped active">
+											<div style="width:90%" class="progress-bar progress-bar-success"></div>
+										</div>
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										See tasks with details
+										<i class="icon-arrow-right"></i>
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="purple">
+							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+								<i class="icon-bell-alt icon-animated-bell"></i>
+								<span class="badge badge-important">8</span>
+							</a>
+
+							<ul class="pull-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-close">
+								<li class="dropdown-header">
+									<i class="icon-warning-sign"></i>
+									8 Notifications
+								</li>
+
+								<li>
+									<a href="#">
+										<div class="clearfix">
+											<span class="pull-left">
+												
+												New Comments
+											</span>
+											<span class="pull-right badge badge-info">+12</span>
+										</div>
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										
+										Bob just signed up as an editor ...
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										<div class="clearfix">
+											<span class="pull-left">
+												
+												New Orders
+											</span>
+											<span class="pull-right badge badge-success">+8</span>
+										</div>
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										<div class="clearfix">
+											<span class="pull-left">
+												
+												Followers
+											</span>
+											<span class="pull-right badge badge-info">+11</span>
+										</div>
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										See all notifications
+										<i class="icon-arrow-right"></i>
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="blue">
+							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+								<i class="icon-envelope icon-animated-vertical"></i>
+								<span class="badge badge-success">5</span>
+							</a>
+
+							<ul class="pull-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
+								<li class="dropdown-header">
+									<i class="icon-envelope-alt"></i>
+									5 Messages
+								</li>
+
+								<li>
+									<a href="#">
+										
+										<span class="msg-body">
+											<span class="msg-title">
+												<span class="blue">Alex:</span>
+												Ciao sociis natoque penatibus et auctor ...
+											</span>
+
+											<span class="msg-time">
+												<i class="icon-time"></i>
+												<span>a moment ago</span>
+											</span>
+										</span>
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										
+										<span class="msg-body">
+											<span class="msg-title">
+												<span class="blue">Susan:</span>
+												Vestibulum id ligula porta felis euismod ...
+											</span>
+
+											<span class="msg-time">
+												<i class="icon-time"></i>
+												<span>20 minutes ago</span>
+											</span>
+										</span>
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										
+										<span class="msg-body">
+											<span class="msg-title">
+												<span class="blue">Bob:</span>
+												Nullam quis risus eget urna mollis ornare ...
+											</span>
+
+											<span class="msg-time">
+												<i class="icon-time"></i>
+												<span>3:15 pm</span>
+											</span>
+										</span>
+									</a>
+								</li>
+
+								<li>
+									<a href="inbox.html">
+										See all messages
+										<i class="icon-arrow-right"></i>
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li >
+							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
+								
+								<span class="user-info">
+									<small>Welcome,</small>
+									Jason
+								</span>
+
+								<i class="icon-caret-down"></i>
+							</a>
+
+							<ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+								<li>
+									<a href="#">
+										<i class="icon-cog"></i>
+										Settings
+									</a>
+								</li>
+
+								<li>
+									<a href="#">
+										<i class="icon-user"></i>
+										Profile
+									</a>
+								</li>
+
+								<li class="divider"></li>
+
+								<li>
+									<a href="#">
+										<i class="icon-off"></i>
+										Logout
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul><!-- /.ace-nav -->
+				</div><!-- /.navbar-header -->
+			</div><!-- /.container -->
+		</div>
+		
+		
+		
+		
+		
+		
+		<div class="main-container margin-t45" id="main-container">
+			<script type="text/javascript">
+				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+			</script>
+
+			<div class="main-container-inner">
+				<a class="menu-toggler" id="menu-toggler" href="#">
+					<span class="menu-text"></span>
+				</a>
+
+				<div class="sidebar sidebar-fixed  " id="sidebar">
+					<script type="text/javascript">
+						try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
+					</script>
+
+				
+					<div id="sidebar-shortcuts" class="sidebar-shortcuts">
+						<div class="breadcrumbs margin-t45" id="uiguide">
+						<span >디자인 스타일 가이드 </span>
+						</div>
+					</div>
+					
+					<ul class="nav nav-list" >
+						<li class="active" ><a href="#" class="dropdown-toggle"><i class="icon-nkia"></i><span class="menu-text">
+							Cygnus 레이아웃 </span><b class="arrow icon-angle-down"></b>
+						   </a>
+						   <ul class="submenu">
+								<li><a href="cygnustheme01.html"><i class="icon-leaf"></i>리소스화면 탭구조(검색)</a></li>
+								<li><a href="cygnustheme02.html"><i class="icon-leaf"></i>리소스화면 탭구조(기본)</a></li>
+								<li><a href="cygnustheme03.html"><i class="icon-leaf"></i>리소스화면 탭구조(서브탭)</a></li>
+								<li><a href="cygnusdashboard.html"><i class="icon-list-alt"></i><span class="menu-text"> Dashboard </span></a></li>
+								<li><a href="cygnusdefault.html"><i class="icon-nkia"></i><span class="menu-text">Cygnus 요약화면 </span></a></li>
+								<li><a href="cygnustheme04.html"><i class="icon-leaf"></i>레이아웃#4 성능가로</a></li>
+								<li><a href="cygnustheme05.html"><i class="icon-leaf"></i>레이아웃#5 성능테이블</a></li>
+								<li><a href="cygnustheme06.html"><i class="icon-leaf"></i>레이아웃#6 성능차트</a></li>
+								<li><a href="cygnustheme07.html"><i class="icon-leaf"></i>레이아웃#7 모니터링</a></li>
+								<li><a href="cygnustheme08.html"><i class="icon-leaf"></i>레이아웃#8이벤트뷰어</a></li>
+								<li><a href="cygnustheme09.html"><i class="icon-leaf"></i>레이아웃#9관리자</a></li>
+								<li><a href="cygnustitle01.html"><i class="icon-leaf"></i>타이틀 규칙</a></li>  
+								<li><a href="cygnusloopgrid02.html"><i class="icon-leaf"></i>LoopGrid UI 규칙 </a></li>
+							</ul>						
+						</li>
+						<li><a href="#" class="dropdown-toggle"><i class="icon-picture"></i><span class="menu-text"> 						
+							ICON </span><b class="arrow icon-angle-down"></b></a>
+							<ul class="submenu">
+								<li><a href="Iconfont-index.html"><i class="icon-picture "></i><span class="menu-text"> ICON bigsize </span></a></li>
+						    	<li><a href="Iconfont-smallindex.html"><i class="icon-picture "></i><span class="menu-text">ICON smallsize</span></a></li>
+							</ul>
+						</li>
+						<li ><a href="typography.html"><i class="icon-text-width"></i><span class="menu-text"> 							
+							 Typography </span>
+							</a>
+						</li>
+						<li ><a href="cygnuscss.html"><i class="icon-binarylog"></i><span class="menu-text">
+							 Etc CSS  </span>
+							</a>
+						</li>
+							<li><a href="#" class="dropdown-toggle"><i class="icon-taskgroup"></i><span class="menu-text"> 							
+							UI Elements 1 </span><b class="arrow icon-angle-down"></b>
+							</a>
+							<ul class="submenu">
+								<li><a href="buttons.html"><i class="icon-double-angle-right"></i>Buttons </a></li>  
+								<li><a href="labels.html"><i class="icon-double-angle-right"></i>Labels & Badge</a></li>    
+								<li><a href="alerts.html"><i class="icon-double-angle-right"></i>Alerts </a></li> 
+								<li><a href="tabs.html"><i class="icon-double-angle-right"></i>Tabs </a></li> 
+								<li><a href="progress-bar.html"><i class="icon-double-angle-right"></i>Progress-bar</a></li>
+								<li><a href="tables.html"><i class="icon-double-angle-right"></i>Table</a></li>
+								<li><a href="accordion.html"><i class="icon-double-angle-right"></i>Accordion</a></li>
+							</ul>
+						</li>
+						<li><a href="#" class="dropdown-toggle"><i class="icon-taskgroup"></i><span class="menu-text"> 							
+							UI Elements 2 </span><b class="arrow icon-angle-down"></b>
+							</a>
+							<ul class="submenu">
+								<li><a href="checkboxradio.html"><i class="icon-double-angle-right"></i>Checkboxes & Radio </a></li>
+								<li><a href="modal.html"><i class="icon-double-angle-right"></i>Modal </a></li>
+								
+								<li><a href="widgets.html"><i class="icon-double-angle-right"></i>Widgets</a></li>
+								<li><a href="nestable-list.html"><i class="icon-double-angle-right"></i>Nestable Lists</a></li>
+								<li><a href="form.html"><i class="icon-double-angle-right"></i>Form Type1  </a></li>
+								<li><a href="formtype2.html"><i class="icon-double-angle-right"></i>Form Type2</a></li>
+								<li><a href="elements.html"><i class="icon-double-angle-right"></i>Tooltips/Popovers/Gritter</a></li>  
+								<li><a href="spinner-wells-dropdowns.html"><i class="icon-double-angle-right"></i>Spinner/Wells/Dropdowns</a></li>
+								<li><a href="jquery-ui.html"><i class="icon-double-angle-right"></i>jQuery UI</a></li>
+							</ul>
+						</li>
+						
+						<li><a href="#" class="dropdown-toggle"><i class=" icon-grid01"></i><span class="menu-text">
+							Tables </span><b class="arrow icon-angle-down"></b>
+							</a>
+							<ul class="submenu">
+								<li><a href="tables.html"><i class="icon-double-angle-right"></i>기본테이블</a></li>
+								<li><a href="jqgrid.html"><i class="icon-double-angle-right"></i>jqGrid plugin</a></li>
+							</ul>
+						</li>
+						<li><a href="form.html"><i class="icon-binarylog"></i><span class="menu-text"> 
+						Form  </span>
+						</a>
+						</li>
+						<li><a href="widgets.html"><i class="icon-group-sign"></i><span class="menu-text"> 
+						Widgets </span>
+						</a>
+						</li>
+						<li><a href="#" class="dropdown-toggle"><i class=" icon-pagefile"></i><span class="menu-text">
+						Other Pages</span>	<b class="arrow icon-angle-down"></b>
+						   </a>
+							<ul class="submenu">
+								<li><a href="faq.html"><i class="icon-double-angle-right"></i>FAQ</a></li>
+								<li><a href="grid.html"><i class="icon-double-angle-right"></i>Grid</a></li>
+							</ul>
+						</li>
+					</ul><!-- /.nav-list -->
+
+					<div class="sidebar-collapse" id="sidebar-collapse">
+						<i class="icon-double-angle-left" data-icon1="icon-double-angle-left" data-icon2="icon-double-angle-right"></i>
+					</div>
+
+					<script type="text/javascript">
+						try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}
+					</script>
+				</div>
+
+				<div class="main-content ">
+					
+
+			
+			<div class="page-content margin-75">
+						<div class="row">
+							<div class="col-xs-12">
+								<!-- PAGE CONTENT BEGINS -->
+
+								<div class="space-6"></div>
+
+								<div class="row">
+									<div class="col-sm-12 ">
+										<div class="widget-box transparent invoice-box">
+											<div class="widget-header widget-header-large">
+												<h3 class="numberfont grey  pull-left position-relative">
+													<i class="icon-polestarlogo"></i>
+													UI CSS GUIDE INDEX 
+												</h3>
+
+												<div class="widget-toolbar no-border invoice-info">
+													<span class="invoice-info-label">Project:</span>
+													<span class="blue">CYGNUS</span>
+
+													<br />
+													<span class="invoice-info-label">Last Updated:</span>
+													<span class="blue">23/06/2015</span>
+												</div>
+
+												<div class="widget-toolbar hidden-480">
+													<a href="#">
+														<i class="icon-print"></i>
+													</a>
+												</div>
+											</div>
+
+											<div class="widget-body">
+												<div class="widget-main padding-24">
+											
+													<div class="row">
+														<div class="col-sx-12 col-sm-12 col-lg-5 " >
+															<div class="row center">
+																 <div class="clearfix margin-t10"></div>  
+																<img src="assets/images/cssuiguide.png">
+																 <div class="clearfix margin-t10"></div>  
+															</div>
+															
+														</div><!-- /span -->
+
+														<div class="col-sx-12 col-sm-12 col-lg-6 col-lg-offset-1">
+															<div class="col-xs-12 ">
+															<div class="widget-box transparent">
+																<div class="widget-header  ">
+																	<h4 class="smaller green" >
+																		<i class="icon-lightbulb bigger-120"></i>
+																		Total Page ( Layout & Elements:29 | etc:3 )
+																	</h4>
+																</div>
+
+																<div class="widget-body">
+																	<div class="widget-main padding-16">
+																		<div class="clearfix">
+																			<div class="grid3 center">
+																				<div class="easy-pie-chart percentage" data-percent="13" data-color="#55AACF">
+																					<span class="percent bigger-150 numberfont">13</span>
+																					page
+																				</div>
+
+																				<div class="space-2"></div>
+																				Cygnus Layout
+																			</div>
+
+																			<div class="grid3 center">
+																				<div class="center easy-pie-chart percentage" data-percent="7" data-color="#59A84B">
+																					<span class="percent bigger-150 numberfont">7</span>
+																					page
+																				</div>
+
+																				<div class="space-2"></div>
+																				UI Elements 1
+																			</div>
+
+																			<div class="grid3 center">
+																				<div class="center easy-pie-chart percentage" data-percent="9" data-color="#ffc657">
+																					<span class="percent bigger-150 numberfont">9</span>
+																					page
+																				</div>
+
+																				<div class="space-2"></div>
+																				UI Elements 2
+																			</div>
+																		</div>
+
+																		
+																		<div class="clearfix hr hr-26"></div>
+																		
+																		
+															<a href="Iconfont-index.html" class="btn  btn-block btn-success ">
+																<i class=" icon-tasklist bigger-120"></i>
+																<span class="bigger-110">VIEW ICON-INDEX </span>
+															</a>
+															<div class="clearfix hr hr-16"></div>
+															<a href="cygnuscss.html" class="btn  btn-block btn-default ">
+																<i class=" icon-binarylog bigger-120"></i>
+																<span class="bigger-110">VIEW CSS-INDEX</span>
+															</a>
+																	</div>
+																</div>
+															</div>
+														</div>	
+<!-- 														<div class="col-sx-12 center" >	 -->
+														
+															
+<!-- 														<a href="cygnuscss.html" class="grey"><i class="icon-angle-right green margin-lr10"></i>추가 편집을 위한 CSS 참고 </a> -->
+<!-- 														<a href="Iconfont-index.html" class="grey"><i class="icon-angle-right green margin-lr10"></i> ICON Index</li></a> -->
+														
+<!-- 														</div> -->
+															
+														</div><!-- /span -->
+													</div><!-- row -->
+
+								<div class="space"></div>
+
+							   <div class="hr hr8 hr-double hr-dotted"></div>
+												
+								<div class="row">
+											<div class="col-sm-12 col-md-4 ">
+												
+												<ul class="list-unstyled  spaced">
+												<li><div class="alert  alert-info no-padding"><h5  ><i class=" icon-win-frameright margin-lr10"></i> Cygnus Layout</h5></div></li>
+												<li><a href="cygnustheme01.html"  class="grey"><i class="icon-angle-right blue margin-lr10"></i>리소스화면 탭구조(검색)</a></li>
+												<li><a href="cygnustheme02.html"  class="grey"><i class="icon-angle-right blue margin-lr10"></i>리소스화면 탭구조(기본)</a></li>
+												<li><a href="cygnustheme03.html"  class="grey"><i class="icon-angle-right blue margin-lr10"></i>리소스화면 탭구조(서브탭)</a></li>
+												<li><a href="cygnusdashboard.html"  class="grey"><i class="icon-angle-right blue margin-lr10"></i><span class="menu-text"> Dashboard </span></a></li>
+												<li><a href="cygnusdefault.html"  class="grey"><i class="icon-angle-right blue margin-lr10"></i><span class="menu-text">Cygnus 요약화면 </span></a></li>
+												<li><a href="cygnustheme04.html"  class="grey"><i class="icon-angle-right blue margin-lr10"></i>레이아웃#4 성능가로</a></li>
+												<li><a href="cygnustheme05.html"  class="grey"><i class="icon-angle-right blue margin-lr10"></i>레이아웃#5 성능테이블</a></li>
+												<li><a href="cygnustheme06.html"  class="grey"><i class="icon-angle-right blue margin-lr10"></i>레이아웃#6 성능차트</a></li>
+												<li><a href="cygnustheme07.html"  class="grey"><i class="icon-angle-right blue margin-lr10"></i>레이아웃#7 모니터링</a></li>
+												<li><a href="cygnustheme08.html"  class="grey"><i class="icon-angle-right blue margin-lr10"></i>레이아웃#8이벤트뷰어</a></li>
+												<li><a href="cygnustheme09.html"  class="grey"><i class="icon-angle-right blue margin-lr10"></i>레이아웃#9관리자</a></li>
+												<li><a href="cygnustitle01.html"  class="grey"><i class="icon-angle-right blue margin-lr10"></i>타이틀 규칙</a></li>  
+												<li><a href="cygnusloopgrid02.html"  class="grey"><i class="icon-angle-right blue margin-lr10"></i>LoopGrid UI 규칙 </a></li>
+												</ul>
+											</div>
+											
+											<div class="col-sm-12 col-md-4">
+												<ul class="list-unstyled  spaced">
+												<li><div class="alert  alert-success no-padding"><h5  ><i class=" icon-win-resources margin-lr10"></i>UI Elements 1</h5></div></li>
+												<li><a href="buttons.html" class="grey"><i class="icon-angle-right green margin-lr10"></i>Buttons </a></li>  
+												<li><a href="labels.html" class="grey"><i class="icon-angle-right green margin-lr10"></i>Labels & Badge</a></li>    
+												<li><a href="alerts.html" class="grey"><i class="icon-angle-right green margin-lr10"></i>Alerts </a></li> 
+												<li><a href="tabs.html" class="grey"><i class="icon-angle-right green margin-lr10"></i>Tabs </a></li> 
+												<li><a href="progress-bar.html" class="grey"><i class="icon-angle-right green margin-lr10"></i>Progress-bar</a></li>
+												<li><a href="tables.html" class="grey"><i class="icon-angle-right green margin-lr10"></i>Table</a></li>
+												<li><a href="accordion.html" class="grey"><i class="icon-angle-right green margin-lr10"></i>Accordion</a></li>
+												</ul>
+											</div>
+											
+											<div class="col-sm-12 col-md-4">
+												<ul class="list-unstyled  spaced">
+												<li><div class="alert  alert-warning no-padding"><h5  ><i class="  icon-th  margin-lr10"></i>UI Elements 2</h5></div></li>
+												<li><a href="checkboxradio.html" class="grey"><i class="icon-angle-right yellow margin-lr10"></i>Checkboxes & Radio </a></li>
+												<li><a href="modal.html" class="grey"><i class="icon-angle-right yellow margin-lr10"></i>Modal </a></li>
+												<li><a href="widgets.html" class="grey"><i class="icon-angle-right yellow margin-lr10"></i>Widgets</a></li>
+												<li><a href="nestable-list.html" class="grey"><i class="icon-angle-right yellow margin-lr10"></i>Nestable Lists</a></li>
+												<li><a href="form.html" class="grey"><i class="icon-angle-right yellow margin-lr10"></i>Form Type1  </a></li>
+												<li><a href="formtype2.html" class="grey"><i class="icon-angle-right yellow margin-lr10"></i>Form Type2</a></li>
+												<li><a href="elements.html" class="grey"><i class="icon-angle-right yellow margin-lr10"></i>Tooltips/Popovers/Gritter</a></li>  
+												<li><a href="spinner-wells-dropdowns.html" class="grey"><i class="icon-angle-right yellow margin-lr10"></i>Spinner/Wells/Dropdowns</a></li>
+												<li><a href="jquery-ui.html" class="grey"><i class="icon-angle-right yellow margin-lr10"></i>jQuery UI</a></li>
+												</ul>
+											</div>
+										</div>		
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<!-- PAGE CONTENT ENDS -->
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content -->
+				</div><!-- /.main-content -->
+
+				
+			</div><!-- /.main-container-inner -->
+
+			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+				<i class="icon-double-angle-up icon-only bigger-110"></i>
+			</a>
+		</div><!-- /.main-container -->
+
+		<!-- basic scripts -->
+
+		<!--[if !IE]> -->
+
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+		</script>
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+<script type="text/javascript">
+ window.jQuery || document.write("<script src='assets/js/jquery-1.10.2.min.js'>"+"<"+"/script>");
+</script>
+<![endif]-->
+      
+      <!--[if lte IE 8]>
+		  <script src="assets/js/excanvas.min.js"></script>
+		<![endif]-->
+      
+     
+		<script type="text/javascript">
+			if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+			
+			
+		</script>
+		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="assets/js/typeahead-bs2.min.js"></script>
+       
+		<!-- page specific plugin scripts -->
+
+		<!-- ace scripts -->
+
+		<script src="assets/js/ace-elements.min.js"></script>
+		<script src="assets/js/ace.min.js"></script>
+
+		<!-- inline scripts related to this page -->
+		<script src="assets/js/jquery-ui-1.10.3.custom.min.js"></script>
+		<script src="assets/js/jquery.ui.touch-punch.min.js"></script>
+		<script src="assets/js/jquery.easy-pie-chart.min.js"></script>
+		
+		
+		<script type="text/javascript">
+			jQuery(function($) {
+				/**
+				$('#myTab a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+				  console.log(e.target.getAttribute("href"));
+				})
+				*/
+			
+			
+			
+			
+				var oldie = /msie\s*(8|7|6)/.test(navigator.userAgent.toLowerCase());
+				$('.easy-pie-chart.percentage').each(function(){
+					$(this).easyPieChart({
+						barColor: $(this).data('color'),
+						trackColor: '#EEEEEE',
+						scaleColor: false,
+						lineCap: 'butt',
+						lineWidth: 12,
+						animate: oldie ? false : 1000,
+						size:115
+					}).css('color', $(this).data('color'));
+				});
+			
+				$('[data-rel=tooltip]').tooltip();
+				$('[data-rel=popover]').popover({html:true});
+			
+			
+			
+				///////
+			
+			
+			
+			
+			
+			
+			});
+		</script>
+		
+	</body>
+</html>

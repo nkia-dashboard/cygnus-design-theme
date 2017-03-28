@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Cygnus UI Guide</title>
+
+		<meta name="description" content="Restyling jQuery UI Widgets and Elements" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- basic styles -->
+
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+
+		<!--[if IE 7]>
+		  <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css" />
+		<![endif]-->
+
+		<!-- page specific plugin styles -->
+
+		<link rel="stylesheet" href="assets/css/jquery-ui-1.10.3.full.min.css" />
+
+		<!-- fonts -->
+
+		<link rel="stylesheet" href="assets/css/ace-fonts.css" />
+
+		<!-- ace styles -->
+
+		<link rel="stylesheet" href="assets/css/ace.css" />
+		
+		<link rel="stylesheet" href="assets/css/ace-rtl.css" />
+		<link rel="stylesheet" href="assets/css/ace-skins.css" />
+
+		<!--[if lte IE 8]>
+		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+		<![endif]-->
+
+		<!-- inline styles related to this page -->
+
+		<!-- ace settings handler -->
+
+		<script src="assets/js/ace-extra.min.js"></script>
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+		<!--[if lt IE 9]>
+		<script src="assets/js/html5shiv.js"></script>
+		<script src="assets/js/respond.min.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+	
+
+		<div class="main-container" id="main-container">
+			<script type="text/javascript">
+				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+			</script>
+
+			<div class="main-container-inner">
+				<div class="page-content">
+					<div class="space-6"></div>
+						<div class="tabbable">
+											<ul class="nav nav-tabs" id="myTab">
+												<li class="active">
+													
+													<a data-toggle="tab" href="#home">
+													<i class="icon-info-sign  bigger-130 "></i>
+													알람콘솔
+													</a>
+												</li>
+
+												<li>
+													<a data-toggle="tab" href="#console">
+													<i class="icon-time  bigger-130 "></i>
+													알람이력	
+													</a>
+												</li>
+
+												
+											</ul>
+
+									</div><!-- /span -->	
+							<!-- /.page-header -->
+										
+					<div class="space-6"></div>
+					<div class="row">	
+					<div class="col-xs-12"  >		
+					<div class="sidebarconsole "  ><!-- /left menu list start-->
+					<ul class="nav nav-list" >
+						<li class="active open" >
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-list"></i>
+								<span class="menu-text"> 알람 이력 개수 (4)</span>
+
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu open">
+								<li>
+									<a href="form.html">
+										<i class="icon-double-angle-right"></i>
+										<ul class="submenu open">
+										<li>
+										<i class="icon-bolt  bigger-130 red"></i>
+										<b>testalarm2</b>
+										</li>
+										<li>
+										<small>RMON:V2 Port 7 on Unit1</small>
+										</li>
+										<li class="text-muted ">
+										<small>2014-06-14 14:56:53 (20분전)</small>
+										
+										</li>
+										</ul>
+										
+									</a>
+								</li>
+
+								<li>
+									<a href="form.html">
+										<i class="icon-double-angle-right"></i>
+										<ul class="submenu open">
+										<li>
+										<i class="icon-warning-sign bigger-110 orange2"></i>
+										<b>testalarm2</b>
+										</li>
+										<li>
+										<small>RMON:V2 Port 7 on Unit1</small>
+										</li>
+										<li class="text-muted ">
+										<small>2014-06-14 14:56:53 (20분전)</small>
+										
+										</li>
+										</ul>
+										
+									</a>
+								</li>
+
+								<li>
+									<a href="form.html">
+										<i class="icon-double-angle-right"></i>
+										<ul class="submenu open">
+										<li>
+										<i class="icon-minus-sign bigger-110 orange"></i>
+										<b>testalarm2</b>
+										</li>
+										<li>
+										<small>RMON:V2 Port 7 on Unit1</small>
+										</li>
+										<li class="text-muted ">
+										<small>2014-06-14 14:56:53 (20분전)</small>
+										
+										</li>
+										</ul>
+										
+									</a>
+								</li>
+
+								<li>
+									<a href="form.html">
+										<i class="icon-double-angle-right"></i>
+										<ul class="submenu open">
+										<li>
+										<i class="icon-minus-sign bigger-110 orange"></i>
+										<b>testalarm2</b>
+										</li>
+										<li>
+										<small>RMON:V2 Port 7 on Unit1</small>
+										</li>
+										<li class="text-muted ">
+										<small>2014-06-14 14:56:53 (20분전)</small>
+										
+										</li>
+										</ul>
+										
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						
+					</ul><!-- /.nav-list -->
+				  </div><!-- /left menu list end-->
+								
+						
+					<div class="main-content-console">
+						
+							<h3 class=" blue header lighter smaller ">
+								<i class="icon-bolt  bigger-110 red"></i> <span class="light-grey">|</span>
+									Testalarm2 
+										<small>
+										<i class="icon-double-angle-right"></i>
+											Root &gt; NKIA_SWITCH &gt; Network Interfaces  &gt; RMON:V2 Port 7 on Unit 1
+										</small>
+										<div class="widget-toolbar action-buttons">
+															<a href="#" data-action="reload">
+																<i class="icon-ok blue"></i>&nbsp; &nbsp;
+															</a>
+							
+															<a href="#" class="grey ">
+																<i class="icon-trash"></i>&nbsp; &nbsp;&nbsp; &nbsp;
+															</a>
+															</div>
+										</h3>
+														
+										
+									<div class="row">
+										<div class="col-xs-12">
+											<div class="console-event-info-striped">
+												<div class="console-info-row">
+													<div class="console-info-name"> 심각도 </div>
+
+													<div class="console-info-value">
+														<span class="label label-event label-critical">CRITICAL</span>
+													</div>
+												</div>
+
+												<div class="console-info-row">
+													<div class="console-info-name"> 알람이름 </div>
+
+													<div class="console-info-value">
+														<span class="editable" id="city">testalarm2</span>
+													</div>
+												</div>
+
+												<div class="console-info-row">
+													<div class="console-info-name"> 발생시간 </div>
+
+													<div class="console-info-value">
+														<span class="editable" id="age">2014-06-17 14:56:53 (19분전)</span>
+													</div>
+												</div>
+
+												<div class="console-info-row">
+													<div class="console-info-name"> 대상 </div>
+
+													<div class="console-info-value">
+														<i class="icon-cog  bigger-110 red"></i>
+														
+														<a href="#"><span class="editable" id="signup">RMON:V2 Port 7 on Unit 1 </span></a>
+													</div>
+												</div>
+
+												<div class="console-info-row">
+													<div class="console-info-name">컨디션로그 </div>
+
+													<div class="console-info-value">
+														<span class="editable" id="login">Metric Value Threashold [트래픽 TX : 20.8 Kbps CRITICAL ( &gt; 2.0bps)]</span>
+													</div>
+												</div>
+
+												<div class="console-info-row">
+													<div class="console-info-name"> 확인자 </div>
+
+													<div class="console-info-value">
+														<i class="icon-check   bigger-130 blue"></i>
+															<span class="editable" id="about">admin</span>
+													</div>
+												</div>
+											</div>
+
+
+										
+									<div class="space-6"></div>
+
+								
+									<div class="tabbable">
+											<ul class="nav nav-tabs" id="myTab">
+												<li class="active">
+													<a data-toggle="tab" href="#home">
+													<i class="icon-info-sign  bigger-130 "></i>
+													컨디션로그
+													</a>
+												</li>
+
+												<li>
+													<a data-toggle="tab" href="#console">
+													<i class="icon-time  bigger-130 "></i>
+													알람이력	
+													</a>
+												</li>
+
+												<li >
+													<a data-toggle="tab" href="#console1">
+													<i class="icon-comment "></i>
+													알람노트
+													</a>
+
+													
+												</li>
+												
+												
+												<li >
+													<a data-toggle="tab" href="#console2">
+													<i class="icon-envelope  "></i>
+													통보로그
+													</a>
+
+													
+												</li>
+											</ul>
+
+									</div><!-- /span -->			
+						
+									
+									
+									
+						<!-- 탭컨텐츠 테이블 1 start-->	
+							<div class="row">
+							<div class="col-xs-12 tab-content no-border ">
+										<div id="home" class="table-responsive tab-pane in active">
+											<table id="sample-table-1" class="table table-striped table-bordered table-hover">
+												<thead>
+													<tr>
+														<th width="20%" nowrap>
+														<a href="#" >발생시간</a>
+														<button class="btn btn-link-thead" >▼▲</button>
+														</th>
+														<th <a href="#" >컨디션로그</a>
+														<button class="btn btn-link-thead" >▼▲</button></th>
+														<th width="20%"><a href="#" >Source Value</a>
+														<button class="btn btn-link-thead" >▼▲</button></th>
+														
+													</tr>
+												</thead>
+
+												<tbody>
+													<tr>
+													<td nowrap>2014-06-17 14:56:53(4시간 42분전)</td>
+													<td >
+													Metric Value Threashold [ 트래픽 Tx:20.8 kbps CRITICAL (> 2.0 bps)]
+													</td>
+													<td>
+													20.8Kbps					
+													</td>
+													</tr>
+
+													<tr>
+													<td >2014-06-17 14:56:53(4시간 42분전)</td>
+													<td >
+													Metric Value Threashold [ 트래픽 Tx:20.8 kbps CRITICAL (> 2.0 bps)]
+													</td>
+													<td>
+													20.8Kbps					
+													</td>
+													</tr>
+
+													<tr>
+													<td >2014-06-17 14:56:53(4시간 42분전)</td>
+													<td >
+													Metric Value Threashold [ 트래픽 Tx:20.8 kbps CRITICAL (> 2.0 bps)]
+													</td>
+													<td>
+													20.8Kbps					
+													</td>
+													</tr>
+
+													<tr>
+													<td >2014-06-17 14:56:53(4시간 42분전)</td>
+													<td >
+													Metric Value Threashold [ 트래픽 Tx:20.8 kbps CRITICAL (> 2.0 bps)]
+													</td>
+													<td>
+													20.8Kbps					
+													</td>
+													</tr>
+
+												</tbody>
+											</table>
+											
+											
+											
+											
+										</div><!-- /.table-responsive -->
+										
+										
+										
+							
+											
+									<!-- 탭컨텐츠 테이블 1 end -->			
+												
+										
+												
+											<div id="console" class="tab-pane">
+													<p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid.</p>
+											</div>
+											
+											<div id="console1" class="tab-pane">
+											
+											<div class="widget-box ">
+											<div class="widget-header">
+												<h4 class="lighter smaller">
+													<i class="icon-comment blue"></i>
+													이력
+												</h4>
+											</div>
+
+											<div class="widget-body">
+												<div class="widget-main no-padding">
+													<div class="dialogs">
+														<div class="itemdiv ">
+														
+															<div class="body">
+																<div class="time ">
+																	<i class="icon-time light-grey"></i>
+																	2014-06-23 11:56:00
+																	&nbsp;
+																	<a href="#" data-action="reload">
+																		<i class="icon-ok blue"></i>
+																		확인
+																	</a>
+																	&nbsp;
+																	<a href="#" class="grey">
+																	<i class="icon-trash"></i>
+																	삭제
+																	</a>
+																</div>
+
+																<div class="name">
+																	<a href="#">Alexa</a>
+																</div>
+																<div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo massa sed ipsum porttitor facilisis.</div>
+
+																<div class="tools">
+																	<a href="#" class="btn btn-minier btn-info">
+																		<i class="icon-only icon-share-alt"></i>
+																	</a>
+																</div>
+															</div>
+														</div>
+
+														<div class="itemdiv ">
+															
+
+															<div class="body">
+																<div class="time ">
+																	<i class="icon-time light-grey"></i>
+																	2014-06-23 11:56:00
+																	&nbsp;
+																	<a href="#" data-action="reload">
+																		<i class="icon-ok blue"></i>
+																		확인
+																	</a>
+																	&nbsp;
+																	<a href="#" class="grey">
+																	<i class="icon-trash"></i>
+																	삭제
+																	</a>
+																</div>
+																<div class="name">
+																	<a href="#">John</a>
+																	
+																</div>
+																<div class="text">Raw denim you probably haven&#39;t heard of them jean shorts Austin.</div>
+
+																<div class="tools">
+																	<a href="#" class="btn btn-minier btn-info">
+																		<i class="icon-only icon-share-alt"></i>
+																	</a>
+																</div>
+															</div>
+														</div>
+
+														
+
+													
+
+
+													<form>
+														<div class="form-actions">
+															<div class="input-group">
+																<input placeholder="Type your message here ..." type="text" class="form-control" name="message" />
+																<span class="input-group-btn">
+																	<button class="btn  btn-info no-radius" type="button">
+																		<i class="icon-share-alt"></i>
+																		Send
+																	</button>
+																</span>
+															</div>
+														</div>
+													</form>
+												</div><!-- /widget-main -->
+											</div><!-- /widget-body -->
+										</div><!-- /widget-box -->
+										</div>
+												
+											
+												
+										</div><!-- /col-xs-12 -->
+									</div><!-- /row -->
+
+								
+								
+								</div>
+								</div>
+								</div>
+								</div>	
+								</div>
+								</div><!-- PAGE CONTENT ENDS -->
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content -->
+				
+				
+			</div><!-- /.main-container-inner -->
+
+			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn  btn-inverse">
+				<i class="icon-double-angle-up icon-only bigger-110"></i>
+			</a>
+		</div><!-- /.main-container -->
+
+		<!-- basic scripts -->
+
+		<!--[if !IE]> -->
+
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+		</script>
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+<script type="text/javascript">
+ window.jQuery || document.write("<script src='assets/js/jquery-1.10.2.min.js'>"+"<"+"/script>");
+</script>
+<![endif]-->
+
+		<script type="text/javascript">
+			if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		</script>
+		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="assets/js/typeahead-bs2.min.js"></script>
+
+		<!-- page specific plugin scripts -->
+
+		<!--[if lte IE 8]>
+		  <script src="assets/js/excanvas.min.js"></script>
+		<![endif]-->
+
+		<script src="assets/js/jquery-ui-1.10.3.custom.min.js"></script>
+		<script src="assets/js/jquery.ui.touch-punch.min.js"></script>
+		<script src="assets/js/chosen.jquery.min.js"></script>
+		<script src="assets/js/fuelux/fuelux.spinner.min.js"></script>
+		<script src="assets/js/date-time/bootstrap-datepicker.min.js"></script>
+		<script src="assets/js/date-time/bootstrap-timepicker.min.js"></script>
+		<script src="assets/js/date-time/moment.min.js"></script>
+		<script src="assets/js/date-time/daterangepicker.min.js"></script>
+		<script src="assets/js/bootstrap-colorpicker.min.js"></script>
+		<script src="assets/js/jquery.knob.min.js"></script>
+		<script src="assets/js/jquery.autosize.min.js"></script>
+		<script src="assets/js/jquery.inputlimiter.1.3.1.min.js"></script>
+		<script src="assets/js/jquery.maskedinput.min.js"></script>
+		<script src="assets/js/bootstrap-tag.min.js"></script>
+
+		<!-- ace scripts -->
+
+		<script src="assets/js/ace-elements.min.js"></script>
+		<script src="assets/js/ace.min.js"></script>
+
+		<!-- inline scripts related to this page -->
+
+		<script type="text/javascript">
+			jQuery(function($) {
+				var oTable1 = $('#sample-table-1').dataTable( {
+				"aoColumns": [
+			      { "bSortable": false },
+			      null, null,null, null, null,
+				  { "bSortable": false }
+				] } );
+				
+				
+				$('table th input:checkbox').on('click' , function(){
+					var that = this;
+					$(this).closest('table').find('tr > td:first-child input:checkbox')
+					.each(function(){
+						this.checked = that.checked;
+						$(this).closest('tr').toggleClass('selected');
+					});
+						
+				});
+			
+			
+				$('[data-rel="tooltip"]').tooltip({placement: tooltip_placement});
+				function tooltip_placement(context, source) {
+					var $source = $(source);
+					var $parent = $source.closest('table')
+					var off1 = $parent.offset();
+					var w1 = $parent.width();
+			
+					var off2 = $source.offset();
+					var w2 = $source.width();
+			
+					if( parseInt(off2.left) < parseInt(off1.left) + parseInt(w1 / 2) ) return 'right';
+					return 'left';
+				}
+			})
+		</script>
+	</body>
+</html>

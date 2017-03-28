@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Cygnus UI Guide</title>
+
+		<meta name="description" content="Restyling jQuery UI Widgets and Elements" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- basic styles -->
+
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+
+		<!--[if IE 7]>
+		  <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css" />
+		<![endif]-->
+
+		<!-- page specific plugin styles -->
+
+		<link rel="stylesheet" href="assets/css/jquery-ui-1.10.3.full.min.css" />
+
+		<!-- fonts -->
+
+		<link rel="stylesheet" href="assets/css/ace-fonts.css" />
+
+		<!-- ace styles -->
+
+		<link rel="stylesheet" href="assets/css/ace.css" />
+		<link rel="stylesheet" href="assets/css/ace-rtl.css" />
+		<link rel="stylesheet" href="assets/css/ace-skins.css" />
+
+		<!--[if lte IE 8]>
+		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+		<![endif]-->
+
+		<!-- inline styles related to this page -->
+		
+		<!-- ace settings handler -->
+
+		<script src="assets/js/ace-extra.min.js"></script>
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+		<!--[if lt IE 9]>
+		<script src="assets/js/html5shiv.js"></script>
+		<script src="assets/js/respond.min.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		
+
+		<div class="main-container" id="main-container">
+			<script type="text/javascript">
+				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
+			</script>
+
+				 <div class="page-content">
+				 <div class="page-header">
+							<h1>
+							<span  class="icon-stack">
+								<i class="icon-desktop icon-large"></i>
+								</span>
+								<i class="  icon-server-08 green icon-large "></i>
+								RHEV 3.3
+								<small>
+									RHEVM
+								</small>
+							</h1>
+						</div><!-- /.page-header -->
+
+				   		
+								<div class="row">
+									<div class="col-xs-12">
+										
+										
+										<ul class="nav nav-tabs head-tab"><li class="active"><a >
+										<i class="icon-dashboard"></i>요약</a></li>
+										<li><a ><i class="icon-topology icon-large"></i>토폴로지</a></li>
+										<li><a ><i class="icon-list-alt icon-large"></i>인벤토리</a></li>
+										<li><a ><i class="icon-emergencylight icon-large"></i>알람</a></li>
+										<li><a ><i class="icon-bar-chart"></i>모니터링</a></li>
+										<li><a ><i class="icon-wrench icon-large"></i>설정</a></li></ul>
+										
+
+            <!-- design template start sub title -->
+										
+										<h4 class="header smaller  hidden-xs">
+										<i class="icon-topology "></i> 토플로지 <small> 컨트롤 박스와 맵을 원하는 위치로 드래그 해서 이동 할 수 있습니다.</small>
+										</h4>
+											
+										
+										
+										<div class="panel panel-default"><!-- panel	panel-default	 -->	
+												<div class="map-body "><!-- map-body	 -->
+													
+												<div class="ui-widget-content ui-draggable" id="draggable-mapcontrol"><!-- control box-->
+													<div class="widget-box ">
+														<div class="widget-header">
+														<div class="form-horizontal" id="spinner-opts">
+														
+														 <a href="#" data-action="settings" class="pull-left">
+														 <i id="zoomIn" class="icon-zoom-in bigger-140  blue"></i>
+														 </a>
+														
+														<div data-percent="56%"  class=" progress progress-nav pull-left">
+														<div style="width:56%;" class="progress-bar progress-bar-blue"></div>
+														</div>
+														
+														<a href="#" data-action="settings" class="margin-10 pull-left ">
+														<i id="zoomOut" class="icon-zoom-out bigger-140 blue "></i>
+														</a>
+															<!-- <a href="#" data-action="settings" >
+															<i class="icon-zoom-in bigger-140  blue"></i>
+															</a>
+															
+															<span class="margin-10 ">
+															<input class="hidden " type="text" name="lines" data-min="5" data-max="16" data-step="2" value="12"  />
+															</span>
+															
+															<a href="#" data-action="settings" class="margin-10 ">
+															<i class="icon-zoom-out bigger-140 blue "></i>
+															</a> -->
+														
+														<span class="widget-toolbar">
+														<a href="#" data-action="collapse">
+															<i class="icon-chevron-up bigger-120 blue"></i>
+														</a>
+												    	</span>
+														</div>	
+															
+														</div>
+														<div class="widget-body" id="topologycolor"><!-- ID도 의미가 있어요 유지바람 -->
+															<div class="widget-main no-padding">
+																<form>
+																	<fieldset>
+																       <div>
+																		<label for="form-field-select-1" class="blue bolder">리소스타입</label>
+																	      <hr class="hr hr-sm"/>
+																	       <div class="checkbox">
+																				<label>
+																					<input name="form-field-checkbox" type="checkbox" class="ace" />
+																					<span class="lbl"> VMWARE VCENTER</span>
+																				</label>
+																			</div> 
+																		     <div class="checkbox">
+																				<label>
+																					<input name="form-field-checkbox" type="checkbox" class="ace" />
+																					<span class="lbl"> RHEVM</span>
+																				</label>
+																			</div> 
+																		   <div class="checkbox">
+																				<label>
+																					<input name="form-field-checkbox" type="checkbox" class="ace" />
+																					<span class="lbl"> HPVM</span>
+																				</label>
+																			</div> 
+																		 
+																		
+																		</div>
+																	   <div class="margin-h15"></div>
+																	   <div>
+																		<label for="form-field-select-1" class="blue bolder">연결종류</label>
+																	      <hr class="hr hr-sm"/>
+																	           <div class="checkbox">
+																				<label>
+																					<input name="form-field-checkbox" type="checkbox" class="ace" />
+																					<span class="lbl blue">VIRTUAL-NETWORK</span>
+																				</label>
+																			</div> 
+																		     <div class="checkbox">
+																				<label>
+																					<input name="form-field-checkbox" type="checkbox" class="ace" />
+																					<span class="lbl green">VIRTUAL-SERVICE</span>
+																				</label>
+																			</div> 
+																		   <div class="checkbox">
+																				<label>
+																					<input name="form-field-checkbox" type="checkbox" class="ace" />
+																					 <span class="lbl orange">VIRTUAL-STORAGE</span>
+																				</label>
+																			</div> 
+																	    
+																		</div>
+																			
+																		</fieldset>
+			
+																	<div class="form-actions map-action center">
+																		<button type="button" class="btn  btn-success">
+																			알람갱신
+																			<i class="icon-refresh bigger-100"></i>
+																		</button>
+																	</div>
+																</form>
+															</div>
+														</div>
+													</div>
+												</div> <!-- controlbox-->
+												 	
+										  </div> <!-- map-body -->
+										 </div>	<!-- panel	panel-default	 -->	
+										
+										
+										
+										
+									
+								
+										</div><!-- /col-xs-12 -->
+									</div><!-- /row -->
+
+
+				
+			
+			
+				
+			</div><!-- /.page contents -->
+
+			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn  btn-inverse">
+				<i class="icon-double-angle-up icon-only bigger-110"></i>
+			</a>
+		</div><!-- /.main-container -->
+
+		<!-- basic scripts -->
+
+		<!--[if !IE]> -->
+
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+		</script>
+
+		<!-- <![endif]-->
+
+		<!--[if IE]>
+<script type="text/javascript">
+ window.jQuery || document.write("<script src='assets/js/jquery-1.10.2.min.js'>"+"<"+"/script>");
+</script>
+<![endif]-->
+
+		<script type="text/javascript">
+			if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		</script>
+		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="assets/js/typeahead-bs2.min.js"></script>
+
+		<!-- page specific plugin scripts -->
+
+		<!--[if lte IE 8]>
+		  <script src="assets/js/excanvas.min.js"></script>
+		<![endif]-->
+
+		<script src="assets/js/jquery-ui-1.10.3.custom.min.js"></script>
+		<script src="assets/js/jquery.ui.touch-punch.min.js"></script>
+		<script src="assets/js/spin.min.js"></script>
+
+		<!-- ace scripts -->
+
+		<script src="assets/js/ace-elements.min.js"></script>
+		<script src="assets/js/ace.min.js"></script>
+
+		<!-- inline scripts related to this page -->
+
+		<script type="text/javascript">
+			jQuery(function($) {
+			
+				$('#spinner-opts small').css({display:'inline-block', width:'60px'})
+			
+				var slide_styles = ['', 'green','red','purple','orange', 'dark'];
+				var ii = 0;
+				$("#spinner-opts input[type=text]").each(function() {
+					var $this = $(this);
+					$this.hide().after('<span />');
+					$this.next().addClass('ui-slider-small').
+					addClass("inline ui-slider-"+slide_styles[ii++ % slide_styles.length]).
+					css({'width':'70px'}).slider({
+						value:parseInt($this.val()),
+						range: "min",
+						animate:true,
+						min: parseInt($this.data('min')),
+						max: parseInt($this.data('max')),
+						step: parseFloat($this.data('step')),
+						slide: function( event, ui ) {
+							$this.attr('value', ui.value);
+							spinner_update();
+						}
+					});
+				});
+			
+			
+			
+			
+			
+				$.fn.spin = function(opts) {
+					this.each(function() {
+					  var $this = $(this),
+						  data = $this.data();
+			
+					  if (data.spinner) {
+						data.spinner.stop();
+						delete data.spinner;
+					  }
+					  if (opts !== false) {
+						data.spinner = new Spinner($.extend({color: $this.css('color')}, opts)).spin(this);
+					  }
+					});
+					return this;
+				};
+			
+				function spinner_update() {
+					var opts = {};
+					$('#spinner-opts input[type=text]').each(function() {
+						opts[this.name] = parseFloat(this.value);
+					});
+					$('#spinner-preview').spin(opts);
+				}
+			
+			
+			
+			
+			});
+		</script>
+	</body>
+</html>

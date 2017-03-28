@@ -1,0 +1,305 @@
+@import "bootstrap/variables.less";
+@import "bootstrap/mixins.less";
+@import "variables.less";
+@import "mixins.less";
+@import "form.less";
+
+//some page-content variables
+@content-bg:#FFF;
+//@content-header-border:#E2E2E2;
+@content-header-color:#0E0E0E;//.page-header h1#3E444C
+@content-header-size:17px;
+@content-header-small-color:#606D75;//.page-header small a span
+@content-header-small-size:12px;
+
+@content-header-border:#898F94;
+
+html {
+  min-height:100%;
+  position:relative;
+   font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  height:100%;
+  margin:0 auto;
+}
+
+body {
+  padding-bottom: 0;
+  background-color:@body-bg;
+  min-height:100%;
+  font-family:@nanumgothicFontFamily;
+  font-size:12px;
+  color:@text-color;
+  height:100%;
+  line-height:1.5;
+  margin:0 auto;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased; 
+  letter-spacing:0.1px;
+// &:before{
+//	 content:"";
+//	 display:none;
+//	 position:fixed;
+//	 top:0; bottom:0; left:0; right:0; z-index:-1;
+//	 background-color:#FFF;
+// }
+  &.navbar-fixed {
+	padding-top:@navbar-mh;
+	
+  }
+  &.breadcrumbs-fixed {
+	padding-top:@navbar-mh + @breadcrumb-height;
+  }
+}
+
+a,a:hover,a:focus,a:active{outline:none;}
+
+/* ace default theme layout sections */
+.main-container {
+	position: static;
+	padding:0;
+	margin:0 auto;
+	min-width:500px;
+	
+}
+.header-content {
+		font-family:@nanumgothicFontFamily;
+	
+	
+	
+}
+
+.main-container:after {
+    background-color: #FFF;
+    bottom: 0;
+    content: "";
+    display: block;
+    max-width: inherit;
+    //position: absolute;
+	position:fixed;
+    top: 0;
+    width: 100%;
+    z-index: -2;
+    clear:both;
+}
+@media (min-width: @screen-tablet) {
+ .container.main-container:after {
+	.box-shadow(~"0 0 0 1px rgba(0,0,0,0.1)");
+ }
+}
+
+.main-container > .main-container-inner{
+	position: relative;
+	
+}
+.container.main-container {
+ .sidebar.sidebar-fixed {
+	& , &:before {
+		left: auto;
+		
+	}
+ }
+ 
+  .sidebarconsole.sidebar-fixed {
+	& , &:before {
+		left: auto;
+	}
+ }
+ 
+}
+
+
+
+
+.main-content {
+ margin-left:@sidebar-width;
+ margin-right:0; margin-top:0;
+ min-height:100%;
+ hight:100%;
+ padding:0;
+ 
+}
+.main-content-sidebarfixed {
+ margin-left:@sidebar-width+75px;
+ margin-right:0; margin-top:0;
+ min-height:100%;
+ hight:100%;
+ padding:0;
+ 
+}
+
+
+.main-content-console {
+ margin-left:@sidebar-width + 70px;
+ margin-right:0; margin-top:0;
+ min-height:100%;
+ padding:0;
+ font-family:@nanumgothicFontFamily;
+ 
+ >.page-content{padding-left:30px;}
+}
+
+/* modals */
+.modal-content {
+ .border-radius(0);
+ .box-shadow(none);
+}
+.modal-footer {
+padding:19px 13px 13px !important;
+border-top:none !important;
+.btn{min-width:60px;}
+}
+.modal-header .close {
+ font-size: 27px;
+}
+.modal-title [class*="icon-"]{font-size:100% !important;  color:#bbb;}
+.modal-title {color:#3E444C;}
+.modal-header{border-top:3px solid #5090C1; 
+	padding: 14px 15px 10px 15px;
+	//border-bottom:3px solid #5090C1;
+    background-color: #ffffff;
+    color: #888 !important;
+    
+//    button.close {
+//    -webkit-appearance: none;
+//    padding: 0;
+//    cursor: pointer;
+//    background:transparent;
+//    border: 0;
+//   
+//}
+//.close {
+//    float: right;
+//    font-size: 30px;
+//    font-weight: bold;
+//    line-height: 1;
+//    color: #FFF;
+//    text-shadow: 0 1px 0 #1D5D8E;
+//    filter: alpha(opacity=100);
+//    opacity: 1;
+//    
+//    }
+//    .close:hover, .close:focus {
+//    color: #fff;
+//    text-decoration: none;
+//    cursor: pointer;
+//    filter: alpha(opacity=50);
+//    opacity: .5;
+//}
+//    
+}
+
+.modal-header h3 {   
+    margin-top: 0!important;
+    margin-bottom: 0 !important;
+}
+
+ .modal-body .icon-3x {
+   
+    font-size: 30px;
+    color: #2AB1D0;
+}
+.modal-body{ padding: 20px 20px 5px 20px;
+	.breadcrumbs {line-height:1; min-height:29px; }
+	.breadcrumbs > strong{color: rgb(80, 144, 193);
+    margin-left: -3px;}
+	.control-label {  
+    color: #555555;
+    hr{margin: 13px 0 !important;}
+    .hr-sm{margin-bottom:7px;}
+   
+}
+}
+#modalZone > .pull-right > a > [class="icon-refresh"] {
+  display: inline-block;
+  position: relative;
+  top: -26px !important;}
+
+#modalZone .ztree {
+  margin: 0;
+  padding: 5px;
+  color: #666;
+  border: 1px solid #ccc;
+  margin-top: 8px !important;
+  background:#f5f5f5;
+  min-height:330px;
+}
+
+#modalZone .modal-footer {padding-bottom:15px !important; padding-top:0 !important;}
+
+
+
+.page-content#eventviewerpopup{border-top:2px solid #3C85C3; padding:0 24px 28px; background:@content-bg; margin:0; hight:100%; }
+.page-content {
+ background:@content-bg;
+ margin:0;
+  hight:100%;
+ padding:3px 24px 28px;
+}//.page-content
+
+.page-header {
+	margin:4px 10px 10px 0;
+	border-bottom:1px dotted @content-header-border;
+	font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;	
+	padding-bottom: 8px;
+    padding-top: 1px;
+      
+	h1 {
+		
+	  font-family:@nanumgothicFontFamily;
+	  padding:0;
+	  margin:0;
+	  font-size:@content-header-size;
+	  font-weight: bold;
+	  color:@content-header-color;
+	
+	  
+	  }
+	  //.page-header .icon-stack
+      .icon-stack{font-size:17px;
+      	height: 1em; line-height: 1.1em; width: 1em; margin-right: 0.4em;}
+      
+     
+	  small {
+		margin:0 6px;
+		font-size:@content-header-small-size;
+		font-weight:400;
+		color:@content-header-small-color;
+		
+		
+		a{span{color:@content-header-small-color;}}
+		a:hover,a:focus,a:active{span{color:@ace-blue;}}
+		
+	  }//small
+	  .hr-sm + .pull-right .btn {margin-top: 3px;}
+	  
+	 .pull-right{
+	 .btn > [class*="icon-"] { font-size:100% !important; } 
+	 .btn-info > [class*="icon-"] { font-size:100% !important; color:#ffffff !important;}
+	 .btn{margin-right:-2px !important; margin-top: -5px;}
+	
+	  //[class*="icon-"] {font-size:80% !important; }
+	 .grey{color:@ace-light-grey;}
+	  .modal-title [class*="icon-"]{font-size:100% !important;  color:#bbb;}
+	 
+	}//h1
+	
+
+	
+}//.page-header
+
+
+.page-header h1 .icon-bookmark {
+    font-size: 22px;
+}
+.icon-stack {
+    position: relative;
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    line-height: 1.5em;
+   .icon-file-pdf-o {font-size:11px !important;} 
+    
+}
+
