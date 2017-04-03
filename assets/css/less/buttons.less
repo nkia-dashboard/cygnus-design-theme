@@ -85,17 +85,46 @@ button.btn:active  {
     margin-left: -3px;
 }
 
+.btn-group.btntoggle {.btn.btn-default.btn-light {
+    min-width:73px !important;
+    width:auto !important;   
+    padding: 5px !important;
+    margin: 2px !important;
+} }
+
+.btn-group.btntoggle > .btn.btn-clear {
+    margin: 2px !important;
+    border-radius: 0 !important;
+   
+}
+
+.btn-group.btntoggle > .btn:last-child {
+    border-bottom-right-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+}
+
+.btn-group.btntoggle > .btn:first-child {
+    border-bottom-left-radius: 0 !important;
+    border-top-left-radius: 0 !important;
+}
+
 #btnCheckGroup .btn > [class*="icon-"] {   
     margin-right: 0px;  
 }
 .btn-group.btn-corner > .btn-clear{border-bottom-left-radius: 3px !important;
     border-top-left-radius: 3px !important; margin-right:-1px !important;}
     
+#btnTrxTaskGroup .btn.btn-default.btn-light {
+    min-width:73px !important;
+    width:auto !important;
+}  
 #btnTrxTaskGroup > .btn.btn-clear, #btnTrxTaskGroup > .btn.btn-light {
     margin: 2px !important;
     border-radius: 0 !important;
-    padding: 0 10px 1px 10px;
+    padding: 0 10px 0 10px !important;
 }
+
+
 
 .alarmcheckbox>.btn.btn-clear,.alarmcheckbox>.btn.btn-attention,
 .alarmcheckbox>.btn.btn-trouble,.alarmcheckbox>.btn.btn-critical,.alarmcheckbox>.btn.btn-debug { min-width:73px !important;}
