@@ -399,7 +399,8 @@ width:100%; background:#ffffff; border-right:none;
 // watch it go full width.
 .panel-body .chartbody{>div .row{>div .col-md-12{font-family:@nanumgothicFontFamily;}}}
 .panel-body {
-  > .table,
+ [id*="serverTopNProcessZone_"]>.table{margin-bottom:8px !important; border-bottom: 1px solid #adb9c1 !important;}
+ [id*="serverTopNProcessZone_"]>.icon-time.icon-large{padding-top:3px; margin-right:3px;}
   > .table-responsive > .table,
   .table,
   > .panel-collapse > .table {
@@ -408,6 +409,7 @@ width:100%; background:#ffffff; border-right:none;
   }
  .table > thead > tr > th{border-bottom:2px solid #91B7D0 !important; padding:5px; background-color:#fff; font-weight:400; white-space:nowrap;}
  .alert:last-child{ margin-bottom: 0 ; padding:5px 8px;}
+ 
 }
 
 .panel {

@@ -306,11 +306,11 @@ input.form-control{width:110px;}}
   -webkit-appearance: none; 
   -moz-appearance: none;
   appearance: none;  
-  background: url(img/sort.png) no-repeat 95% 50%;
+  background: url(img/sort_both.png) no-repeat 100% 50%;
   &:focus {	
 	outline:none;
 	border:1px solid @input-border;
-	background: url(img/sort.png) no-repeat 95% 50%;
+	background: url(img/sort_both.png) no-repeat 100% 50%;
  }
 
 }
@@ -340,8 +340,9 @@ select.form-control {
   min-width:65px;
   border:none;
   outline:1px solid @input-border;
-  background: url(img/sort.png) no-repeat 95% 50%;
+  background: url(img/sort_both.png) no-repeat 100% 50%;
 }
+select.form-control[disabled]{ border:none !important;}
 select[multiple] , select.form-control[multiple] {
   padding: 3px 6px;
   height: @select-height;
