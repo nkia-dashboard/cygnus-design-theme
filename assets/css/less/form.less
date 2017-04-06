@@ -306,11 +306,11 @@ input.form-control{width:110px;}}
   -webkit-appearance: none; 
   -moz-appearance: none;
   appearance: none;  
-  background: url(img/sort_both.png) no-repeat 100% 50%;
+  background: url(img/sort_boths.png) no-repeat 100% 50%;
   &:focus {	
 	outline:none;
 	border:1px solid @input-border;
-	background: url(img/sort_both.png) no-repeat 100% 50%;
+	background: url(img/sort_boths.png) no-repeat 100% 50%;
  }
 
 }
@@ -338,11 +338,19 @@ select.form-control {
   flex:120px; 
   margin-right:2px;
   min-width:65px;
-  border:none;
+  border:none !important;
   outline:1px solid @input-border;
-  background: url(img/sort_both.png) no-repeat 100% 50%;
+  background: url(img/sort_boths.png) no-repeat 100% 50%;
+  background-color:#ffffff;
+   &:focus{	
+	outline:none;
+	border:1px solid @input-border !important;
+	background: url(img/sort_boths.png) no-repeat 100% 50%;
+	background-color:#ffffff;
+ }
 }
-select.form-control[disabled]{ border:none !important;}
+
+select.form-control[disabled]{ border:none !important; background: url(img/sort_both_dis.png) no-repeat 100% 50%;}
 select[multiple] , select.form-control[multiple] {
   padding: 3px 6px;
   height: @select-height;
