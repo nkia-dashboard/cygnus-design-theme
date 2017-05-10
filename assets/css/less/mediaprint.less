@@ -12,7 +12,7 @@
   abbr[title]:after {content: " (" attr(title) ")";}
   a[href^="javascript:"]:after,
   a[href^="#"]:after {content: "";}  
-
+  a {color: #428bca;}
   pre,
   blockquote {
     border: 1px solid #999;
@@ -94,6 +94,17 @@
  .progress{height:17px;}
  .label-clear, .badge-clear,.label-attention, .badge-attention{background-color:#888 !important; }
  fieldset.scheduler-border { height: 65px !important; min-height:0 !important;}
+ .green {color: #62b515 !important;}
+ .orange {color: #f47320 !important;}
+ .red {color: #f22121 !important;}
+.label {
+    border-radius: 1;   
+    -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.04);
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.04);
+    background-color: #bfc3c7;
+    border-color:none;
+    color:#ffffff;
+}
 .progress-bar-success { background-color: #4fb334;}
 .label-critical, .badge-critical { background-color: #f22121 !important;}
 .label-clear, .badge-clear {background-color: #4fb334 !important;}
