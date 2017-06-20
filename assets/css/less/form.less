@@ -11,15 +11,11 @@
 @input-readonly-focus-border:#AAA;
 @input-readonly-focus-bg:#F9F9F9;
 @input-readonly-focus-shadow:~"0px 0px 0px 2px rgba(150, 150, 150, 0.3)";
-
 @input-disabled-color:#848484;
 @input-disabled-bg:#EEE;
-
 @input-hover-border:lighten(greyscale(@input-focus-border),10%);
 
 @option-hover-bg:#E5E9EE;
-
-
 //form error states
 @success-state-border:#92BF65;
 @success-state-color:#8BAD4C;
@@ -350,7 +346,9 @@ select.form-control {
  }
 }
 
-select.form-control[disabled]{ border:none !important; background: url(img/sort_both_dis.png) no-repeat 100% 50%!important;}
+select.form-control[disabled]{ border:none !important; background: url(img/sort_both_dis.png) no-repeat 100% 50%!important;
+background-color: #ececec !important;
+}
 select[multiple] , select.form-control[multiple] {
   padding: 3px 6px;
   height: @select-height;
